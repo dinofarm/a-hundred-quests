@@ -85,7 +85,7 @@
     </NestedContentProject>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Desktop\SpriteSheetSample\SpriteSheetRuntime\SpriteSheetRuntimeWindows.csproj">
+    <ProjectReference Include="..\SpriteSheetRuntime\SpriteSheetRuntimeWindows.csproj">
       <Project>{8920CB58-7E98-4EE9-8726-BE29BB9BD778}</Project>
       <Name>SpriteSheetRuntimeWindows</Name>
     </ProjectReference>

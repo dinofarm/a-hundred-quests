@@ -116,7 +116,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Desktop\SpriteSheetSample\SpriteSheetPipeline\SpriteSheetPipeline.csproj">
+    <ProjectReference Include="..\..\SpriteSheetPipeline\SpriteSheetPipeline.csproj">
       <Project>{288693A4-E777-4A32-A658-3AB8B48C8511}</Project>
       <Name>SpriteSheetPipeline</Name>
     </ProjectReference>
