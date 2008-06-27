@@ -7,11 +7,15 @@ namespace OHQData
     public interface Polygon
     {
         bool contains(double x, double y);
+        double LeftBound();
+        double RightBound();
+        double TopBound();
+        double BottomBound();
     }
 
     public abstract class RadialPolygon : Polygon
     {
-        protected static int NUM_RADIUS = 16;
+        protected static int NUM_RADIUS = 32;
         protected static double ANGLE_PER_RADIUS = (2.0 * Math.PI) / NUM_RADIUS;
 
         protected List<Coordinate> points;
@@ -22,16 +26,52 @@ namespace OHQData
         protected double centerX;
         protected double centerY;
 
+        private double left;
+        public double LeftBound()
+        {
+            return left;
+        }
+
+        private double right;
+        public double RightBound()
+        {
+            return right;
+        }
+
+        private double top;
+        public double TopBound()
+        {
+            return top;
+        }
+
+        private double bottom;
+        public double BottomBound()
+        {
+            return bottom;
+        }
+
         public RadialPolygon(double centerX, double centerY)
         {
-            // TODO: convert these asserts to C#
-            //assert(0 <= polX);
-            //assert(0 <= polY);
-
             this.centerX = centerX;
             this.centerY = centerY;
 
             random = new Random();
+        }
+
+        protected void calcBoundaries()
+        {
+            left = points[0].x;
+            right = points[0].x;
+            top = points[0].y;
+            bottom = points[0].y;
+            foreach (Coordinate c in points)
+            {
+                left = Math.Min(c.x, left);
+                right = Math.Max(c.x, right);
+
+                top = Math.Min(c.y, top);
+                bottom = Math.Max(c.y, bottom);
+            }
         }
 
         /**
@@ -120,29 +160,34 @@ namespace OHQData
     public class RadialCirclePolygon : RadialPolygon
     {
 
-	    public RadialCirclePolygon(double centerX, double centerY,
-                                   double lowerRadius, double higherRadius) : base(centerX, centerY)
+        public RadialCirclePolygon(double centerX, double centerY,
+                                   double lowerRadius, double higherRadius)
+            : base(centerX, centerY)
         {
 
-		    double[] radius = new double[NUM_RADIUS];
+            double[] radius = new double[NUM_RADIUS];
 
-		    for (int i = 0; i < NUM_RADIUS; i++) {
-			    radius[i] = lowerRadius + (higherRadius - lowerRadius)
-					    * random.NextDouble();
-		    }
+            for (int i = 0; i < NUM_RADIUS; i++)
+            {
+                radius[i] = lowerRadius + (higherRadius - lowerRadius)
+                        * random.NextDouble();
+            }
 
-		    points = new List<Coordinate>();
-		    for (int i = 0; i < NUM_RADIUS; i++) {
-			    double angle = i * ANGLE_PER_RADIUS;
+            points = new List<Coordinate>();
+            for (int i = 0; i < NUM_RADIUS; i++)
+            {
+                double angle = i * ANGLE_PER_RADIUS;
 
-			    double pointX = centerX + radius[i] * Math.Cos(angle);
-			    double pointY = centerY + radius[i] * Math.Sin(angle);
+                double pointX = centerX + radius[i] * Math.Cos(angle);
+                double pointY = centerY + radius[i] * Math.Sin(angle);
                 points.Add(new Coordinate(pointX, pointY));
-		    }
+            }
 
-		    calcNormals();
+            calcNormals();
+            calcBoundaries();
 
-	    }
+        }
+
 
     }
 }

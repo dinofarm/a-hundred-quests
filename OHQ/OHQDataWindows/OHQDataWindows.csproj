@@ -57,6 +57,7 @@
     <Compile Include="Helpers\Polygons.cs" />
     <Compile Include="Helpers\RandomAid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResizableGrid.cs" />
     <Compile Include="WorldObject.cs" />
   </ItemGroup>
   <ItemGroup>

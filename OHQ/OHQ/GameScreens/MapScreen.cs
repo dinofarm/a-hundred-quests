@@ -14,7 +14,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Content;
 using OHQData.Characters;
 using OHQData;
 #endregion
@@ -33,7 +32,7 @@ namespace OHQ
         ContentManager content;
         SpriteFont gameFont;
 
-        Vector2 playerPosition = new Vector2(100, 100);
+        Vector2 playerPosition = new Vector2(0, 0);
         Player player;
 
         Random random = new Random();
@@ -166,16 +165,21 @@ namespace OHQ
                     if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.Down))
                         movement.Y++;
 
-                    Vector2 thumbstick = input.CurrentGamePadStates[i].ThumbSticks.Left;
+                    //Vector2 thumbstick = input.CurrentGamePadStates[i].ThumbSticks.Left;
 
-                    movement.X += thumbstick.X;
-                    movement.Y -= thumbstick.Y;
+                    //movement.X += thumbstick.X;
+                   // movement.Y -= thumbstick.Y;
                 }
 
                 if (movement.Length() > 1)
                     movement.Normalize();
 
-                playerPosition += movement * 2;
+                playerPosition += movement;
+                if (!map.getTile(playerPosition).IsWalkable)
+                {
+                    playerPosition -= movement;
+                }
+                //playerPosition += movement * 2;
             }
         }
 
@@ -194,9 +198,10 @@ namespace OHQ
             spriteBatch.Begin();
 
             // draw the map
-            map.draw(spriteBatch);
+            map.draw(spriteBatch, (int)playerPosition.X, (int)playerPosition.Y);
 
-            sprite.DrawFrame(spriteBatch, Vector2.Zero);
+            Vector2 centerPlayer = new Vector2(16 * Tile.SizePx, 10 * Tile.SizePx);
+            sprite.DrawFrame(spriteBatch, centerPlayer);
 
             spriteBatch.End();
 

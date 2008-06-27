@@ -9,27 +9,6 @@ namespace OHQData
 {
     public class Terrain : ContentObject
     {
-        /*
-        #region Sprite
-
-        /// <summary>
-        /// The tile sprite
-        /// </summary>
-        private Texture2D sprite;
-
-        /// <summary>
-        /// The tile sprite
-        /// </summary>
-        [ContentSerializerIgnore]
-        public Texture2D Sprite
-        {
-            get { return sprite; }
-            set { sprite = value; }
-        }
-
-        #endregion
-         */
-
 
         public string Name
         {
@@ -41,6 +20,16 @@ namespace OHQData
 
                 return name;
             }
+        }
+
+
+        private bool isWalkable = true;
+
+        [ContentSerializerIgnore]
+        public bool IsWalkable
+        {
+            get { return isWalkable; }
+            set { isWalkable = value; }
         }
 
         private static SpriteSheet spriteSheet;
