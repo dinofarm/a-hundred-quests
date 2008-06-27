@@ -1,2 +1,0 @@
-C:\Documents and Settings\jonathan\Desktop\SpriteSheetSample\SpriteSheetRuntime\Content\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\SpriteSheetRuntime\Content\obj\x86\Debug\ResolveAssemblyReference.cache

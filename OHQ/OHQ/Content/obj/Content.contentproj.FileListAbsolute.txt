@@ -1,2 +1,0 @@
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\original_OHQ\OHQ\Content\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\Content\obj\x86\Debug\ResolveAssemblyReference.cache
