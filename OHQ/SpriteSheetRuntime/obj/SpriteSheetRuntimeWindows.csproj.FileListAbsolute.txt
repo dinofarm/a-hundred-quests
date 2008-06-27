@@ -1,0 +1,14 @@
+C:\Documents and Settings\jonathan\Desktop\SpriteSheetSample\SpriteSheetRuntime\bin\x86\Debug\SpriteSheetRuntime.dll
+C:\Documents and Settings\jonathan\Desktop\SpriteSheetSample\SpriteSheetRuntime\bin\x86\Debug\SpriteSheetRuntime.pdb
+C:\Documents and Settings\jonathan\Desktop\SpriteSheetSample\SpriteSheetRuntime\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\jonathan\Desktop\SpriteSheetSample\SpriteSheetRuntime\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\jonathan\Desktop\SpriteSheetSample\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.obj.x86.Debug.Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\jonathan\Desktop\SpriteSheetSample\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.dll
+C:\Documents and Settings\jonathan\Desktop\SpriteSheetSample\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.pdb
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\SpriteSheetRuntime\bin\x86\Debug\SpriteSheetRuntime.dll
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\SpriteSheetRuntime\bin\x86\Debug\SpriteSheetRuntime.pdb
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\SpriteSheetRuntime\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\SpriteSheetRuntime\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.obj.x86.Debug.Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.dll
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\SpriteSheetRuntime\obj\x86\Debug\SpriteSheetRuntime.pdb
