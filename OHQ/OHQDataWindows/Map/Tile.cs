@@ -72,12 +72,18 @@ namespace OHQData
         /// <summary>
         /// Draw the tile
         /// </summary>
-        public void draw(SpriteBatch spriteBatch, Rectangle position)
+        public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
         {
             // TODO: fix how larger terrains such as the mountain (50x50 px) are drawn
 
             // draw terrain
-            spriteBatch.Draw(terrain.Sprite, position, Color.White);
+            //spriteBatch.Draw(terrain.Sprite, position, Color.White);
+            int terrainIndex = terrain.SpriteSheet.GetIndex(terrain.Name);
+
+            spriteBatch.Draw(terrain.SpriteSheet.Texture, // texture
+                             destinationRectangle, // destination rectangle
+                             terrain.SpriteSheet.SourceRectangle(terrainIndex), // source rectangle (from the sprite sheet)
+                             Color.White); // background color
 
             // draw structure on this tile (dungeon, forest, town, etc)
             // TODO: draw structure

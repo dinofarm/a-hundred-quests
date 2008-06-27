@@ -85,6 +85,10 @@
     </NestedContentProject>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Desktop\SpriteSheetSample\SpriteSheetRuntime\SpriteSheetRuntimeWindows.csproj">
+      <Project>{8920CB58-7E98-4EE9-8726-BE29BB9BD778}</Project>
+      <Name>SpriteSheetRuntimeWindows</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OHQDataWindows\OHQDataWindows.csproj">
       <Project>{20E9EAE5-F91A-45E2-859D-512BDBEEFBD2}</Project>
       <Name>OHQDataWindows</Name>

@@ -28,6 +28,7 @@ namespace OHQData
     {
         #region Members
 
+        // indexed as [column, row]
         private Tile[,] tiles;
 
         /// <summary>
@@ -638,10 +639,46 @@ namespace OHQData
                 for (int row = 1; row <= size; row++)
                 {
                     drawTile(spriteBatch, row, column, x, y, Tile.SizePx, Tile.SizePx);
+                    //drawBorder();
                     y += Tile.SizePx;
                 }
                 x += Tile.SizePx;
             }
+        }
+
+        public void drawBorder(SpriteBatch spriteBatch,
+                               int row, int column)
+        {
+            /*
+            Tile tile = tile[column, row];
+
+            // if water or wasteland
+            if (tile.Terrain == water || tile.Terrain == wasteland)
+            {
+                int xIncrement = row * Tile.SizePx;
+                int yIncrement = column * Tile.SizePx;
+                int border = border[row, column];
+
+                if (tile.Terrain == wasteland)
+                {
+                    //spriteBatch.Draw(terrain.Sprite, position, Color.White);
+
+                    gMap.drawImage(tileType.getBorder(TileLoader.GRASS_BORDER,
+                            border, animateSlowTerrain), xIncrement, yIncrement, null);
+                    gMap.drawImage(tileType.getCornerBorder(
+                            TileLoader.GRASS_BORDER, border, animateSlowTerrain),
+                            xIncrement, yIncrement, null);
+                }
+                else
+                {
+                    gMap.drawImage(tileType.getBorder(TileLoader.WATER_BORDER,
+                            border, animateSlowTerrain), xIncrement, yIncrement, null);
+                    gMap.drawImage(tileType.getCornerBorder(
+                            TileLoader.WATER_BORDER, border, animateSlowTerrain),
+                            xIncrement, yIncrement, null);
+                }
+            }
+             */
         }
 
         /// <summary>
@@ -656,8 +693,8 @@ namespace OHQData
             // TODO: throw exception if row/column is beyond array bounds
 
             Tile tile = tiles[row-1, column-1];
-            Rectangle position = new Rectangle(x, y, width, height);
-            tile.draw(spriteBatch, position);
+            Rectangle destinationRectangle = new Rectangle(x, y, width, height);
+            tile.draw(spriteBatch, destinationRectangle);
         }
 
         #endregion

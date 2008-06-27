@@ -116,13 +116,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Textures\Map\Terrains\Grass.png">
-      <Name>Grass</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\Desktop\SpriteSheetSample\SpriteSheetPipeline\SpriteSheetPipeline.csproj">
+      <Project>{288693A4-E777-4A32-A658-3AB8B48C8511}</Project>
+      <Name>SpriteSheetPipeline</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\OHQProcessors\OHQProcessors.csproj">
       <Project>{B83C3884-8BB1-493C-9DAA-6DAF3F20CDEF}</Project>
       <Name>OHQProcessors</Name>
@@ -164,28 +161,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Textures\Map\Terrains\Hill.png">
-      <Name>Hill</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Textures\Map\Terrains\Mountain.png">
-      <Name>Mountain</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Textures\Map\Terrains\Wasteland.png">
-      <Name>Wasteland</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Textures\Map\Terrains\Water.png">
-      <Name>Water</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Textures\Map\Borders\Shroud.png">
       <Name>Shroud</Name>
       <Importer>TextureImporter</Importer>
@@ -205,6 +180,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Textures\Map\Terrains\SpriteSheet.xml">
+      <Name>SpriteSheet</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>SpriteSheetProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Map\Borders\" />
     <Folder Include="Textures\Battlefields\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

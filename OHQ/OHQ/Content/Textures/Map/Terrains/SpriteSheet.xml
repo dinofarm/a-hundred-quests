@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+	<Asset Type="System.String[]">
+		<Item>Textures\Map\Terrains\Grass.png</Item>
+		<Item>Textures\Map\Terrains\Hill.png</Item>
+		<Item>Textures\Map\Terrains\Mountain.png</Item>
+		<Item>Textures\Map\Terrains\Wasteland.png</Item>
+		<Item>Textures\Map\Terrains\Water.png</Item>
+	</Asset>
+</XnaContent>

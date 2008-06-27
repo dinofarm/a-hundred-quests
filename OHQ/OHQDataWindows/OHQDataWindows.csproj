@@ -59,6 +59,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorldObject.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Desktop\SpriteSheetSample\SpriteSheetRuntime\SpriteSheetRuntimeWindows.csproj">
+      <Project>{8920CB58-7E98-4EE9-8726-BE29BB9BD778}</Project>
+      <Name>SpriteSheetRuntimeWindows</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

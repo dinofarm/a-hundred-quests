@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using SpriteSheetRuntime;
 
 namespace OHQData
 {
     public class Terrain : ContentObject
     {
+        /*
         #region Sprite
 
         /// <summary>
@@ -26,6 +28,29 @@ namespace OHQData
         }
 
         #endregion
+         */
+
+
+        public string Name
+        {
+            get
+            {
+                // Remove the path part of the assetname, leaving just the filename
+                int start = AssetName.LastIndexOf('\\') + 1;
+                string name = AssetName.Substring(start);
+
+                return name;
+            }
+        }
+
+        private static SpriteSheet spriteSheet;
+
+        [ContentSerializerIgnore]
+        public SpriteSheet SpriteSheet
+        {
+            get { return spriteSheet; }
+            set { spriteSheet = value; }
+        }
 
         #region Count
 
@@ -75,6 +100,7 @@ namespace OHQData
 
                 terrain.AssetName = input.AssetName;
 
+                /*
                 try
                 {
                     terrain.Sprite = input.ContentManager.Load<Texture2D>(
@@ -84,6 +110,13 @@ namespace OHQData
                 {
                     Console.WriteLine(e.Message);
                     Environment.Exit(0);
+                }
+                 */
+
+                if (terrain.SpriteSheet == null)
+                {
+                    string path = @"Textures\Map\Terrains\SpriteSheet";
+                    terrain.SpriteSheet = input.ContentManager.Load<SpriteSheet>(path);
                 }
 
                 return terrain;

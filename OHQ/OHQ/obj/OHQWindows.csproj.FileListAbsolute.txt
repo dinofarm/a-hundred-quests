@@ -48,11 +48,9 @@ C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\
 C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Map\Terrains\Hill.xnb
 C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Map\Terrains\Mountain.xnb
 C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Map\Terrains\Wasteland.xnb
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Terrains\Grass.xnb
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Terrains\Hill.xnb
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Terrains\Mountain.xnb
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Terrains\Water.xnb
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Terrains\Wasteland.xnb
 C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Borders\Shroud.xnb
 C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Borders\Grass.xnb
 C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Borders\Water.xnb
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\SpriteSheetRuntime.dll
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\SpriteSheetRuntime.pdb
+C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Terrains\SpriteSheet.xnb
