@@ -12,6 +12,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using OHQData;
+using OHQData.Sprites;
 #endregion
 
 namespace OHQData

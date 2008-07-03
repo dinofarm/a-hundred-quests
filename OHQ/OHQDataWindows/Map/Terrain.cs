@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using SpriteSheetRuntime;
+using OHQData.Sprites;
 
 namespace OHQData
 {
     public class Terrain : ContentObject
     {
-
         public string Name
         {
             get
@@ -39,6 +39,15 @@ namespace OHQData
         {
             get { return spriteSheet; }
             set { spriteSheet = value; }
+        }
+
+        private Sprite sprite;
+
+        [ContentSerializerIgnore]
+        public Sprite Sprite
+        {
+            get { return sprite; }
+            set { sprite = value; }
         }
 
         #region Count
@@ -72,6 +81,21 @@ namespace OHQData
             count = 1;
         }
 
+        #region Update and draw
+
+        public void update()
+        {
+
+        }
+
+        public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
+        {
+            sprite.draw(spriteBatch, destinationRectangle);
+        }
+
+        #endregion 
+
+
         #region Content type reader
 
         /// <summary>
@@ -89,24 +113,14 @@ namespace OHQData
 
                 terrain.AssetName = input.AssetName;
 
-                /*
-                try
-                {
-                    terrain.Sprite = input.ContentManager.Load<Texture2D>(
-                        System.IO.Path.Combine(@"Textures", terrain.AssetName));
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                    Environment.Exit(0);
-                }
-                 */
-
                 if (terrain.SpriteSheet == null)
                 {
                     string path = @"Textures\Map\Terrains\SpriteSheet";
                     terrain.SpriteSheet = input.ContentManager.Load<SpriteSheet>(path);
                 }
+
+                terrain.Sprite = new Sprite(terrain.Name, terrain.SpriteSheet);
+
 
                 return terrain;
             }

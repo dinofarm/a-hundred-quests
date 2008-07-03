@@ -16,8 +16,9 @@ namespace OHQ
     /// </summary>
     public class OHQGame : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
-        ScreenManager screenManager;
+        private static GraphicsDeviceManager graphicsDeviceManager;
+        private static ContentManager contentManager;
+        private static ScreenManager screenManager;
 
         private const int PREFFERED_SCREEN_WIDTH_PX  = 1280;
         private const int PREFERRED_SCREEN_HEIGHT_PX = 720;
@@ -28,9 +29,9 @@ namespace OHQ
             Content.RootDirectory = "Content";
 
             // graphics system
-            graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferWidth  = PREFFERED_SCREEN_WIDTH_PX;
-            graphics.PreferredBackBufferHeight = PREFERRED_SCREEN_HEIGHT_PX;
+            graphicsDeviceManager = new GraphicsDeviceManager(this);
+            graphicsDeviceManager.PreferredBackBufferWidth  = PREFFERED_SCREEN_WIDTH_PX;
+            graphicsDeviceManager.PreferredBackBufferHeight = PREFERRED_SCREEN_HEIGHT_PX;
 
             // screen manager
             screenManager = new ScreenManager(this);
@@ -60,7 +61,7 @@ namespace OHQ
         protected override void Draw(GameTime gameTime)
         {
             // clear the display
-            graphics.GraphicsDevice.Clear(Color.Black);
+            graphicsDeviceManager.GraphicsDevice.Clear(Color.Black);
 
             // The real drawing happens inside the screen manager component.
             base.Draw(gameTime);

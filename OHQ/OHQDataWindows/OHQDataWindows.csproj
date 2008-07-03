@@ -31,17 +31,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xna.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animation\AnimatingSprite.cs" />
-    <Compile Include="Animation\Animation.cs" />
-    <Compile Include="Characters\Character.cs" />
-    <Compile Include="Characters\CharacterClass.cs" />
-    <Compile Include="Characters\FightingCharacter.cs" />
-    <Compile Include="Characters\Player.cs" />
+    <Compile Include="Sprites\AnimatingSprite.cs" />
+    <Compile Include="Sprites\Animation.cs" />
+    <Compile Include="Sprites\Sprite.cs" />
     <Compile Include="ContentEntry.cs" />
     <Compile Include="ContentObject.cs" />
     <Compile Include="Data\Int32Range.cs" />
@@ -57,14 +55,12 @@
     <Compile Include="Helpers\Polygons.cs" />
     <Compile Include="Helpers\RandomAid.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResizableGrid.cs" />
+    <Compile Include="Helpers\ResizableGrid.cs" />
+    <Compile Include="Sprites\SpriteSheet.cs" />
     <Compile Include="WorldObject.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SpriteSheetRuntime\SpriteSheetRuntimeWindows.csproj">
-      <Project>{8920CB58-7E98-4EE9-8726-BE29BB9BD778}</Project>
-      <Name>SpriteSheetRuntimeWindows</Name>
-    </ProjectReference>
+    <Folder Include="Characters\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

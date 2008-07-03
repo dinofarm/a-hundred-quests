@@ -116,10 +116,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SpriteSheetPipeline\SpriteSheetPipeline.csproj">
-      <Project>{288693A4-E777-4A32-A658-3AB8B48C8511}</Project>
-      <Name>SpriteSheetPipeline</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\OHQProcessors\OHQProcessors.csproj">
       <Project>{B83C3884-8BB1-493C-9DAA-6DAF3F20CDEF}</Project>
       <Name>OHQProcessors</Name>

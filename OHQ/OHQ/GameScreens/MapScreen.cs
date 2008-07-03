@@ -14,7 +14,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using OHQData.Characters;
 using OHQData;
 #endregion
 
@@ -33,7 +32,6 @@ namespace OHQ
         SpriteFont gameFont;
 
         Vector2 playerPosition = new Vector2(0, 0);
-        Player player;
 
         Random random = new Random();
 
