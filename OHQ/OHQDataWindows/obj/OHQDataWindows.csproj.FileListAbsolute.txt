@@ -1,9 +1,0 @@
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\bin\Debug\OHQDataWindows.dll
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\bin\Debug\OHQDataWindows.pdb
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\bin\Debug\Microsoft.Xna.Framework.dll
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\bin\Debug\Microsoft.Xna.Framework.xml
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\obj\Debug\OHQDataWindows.dll
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\obj\Debug\OHQDataWindows.pdb
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\bin\Debug\nunit.framework.dll
-C:\Documents and Settings\jonathan\My Documents\Visual Studio 2005\Projects\OHQ\OHQDataWindows\bin\Debug\nunit.framework.xml
