@@ -13,7 +13,7 @@ using Microsoft.Xna.Framework.Content;
 using System.Diagnostics;
 #endregion
 
-namespace OHQData
+namespace OHQData.Sprites
 {
     /// <summary>
     /// An animation description for an AnimatingSprite object.
@@ -23,81 +23,92 @@ namespace OHQData
 #endif
     public class Animation : ContentObject
     {
-        /// <summary>
-        /// The name of the animation.
-        /// </summary>
-        private string name;
+        #region Members
 
         /// <summary>
         /// The name of the animation.
         /// </summary>
-        [ContentSerializer(Optional = true)]
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-
-
+        private string textureName;
         /// <summary>
-        /// The first frame of the animation.
+        /// The name of the animation.
         /// </summary>
-        private int startingFrame;
-
-        /// <summary>
-        /// The first frame of the animation.
-        /// </summary>
-        public int StartingFrame
+        public string TextureName
         {
-            get { return startingFrame; }
-            set { startingFrame = value; }
+            get { return textureName; }
+            set { textureName = value; }
         }
 
 
         /// <summary>
-        /// The last frame of the animation.
+        /// Number of frames in the animation
         /// </summary>
-        private int endingFrame;
-
+        private int frameCount;
         /// <summary>
-        /// The last frame of the animation.
+        /// Number of frames in the animation
         /// </summary>
-        public int EndingFrame
+        public int FrameCount
         {
-            get { return endingFrame; }
-            set { endingFrame = value; }
+            get { return frameCount; }
+            set { frameCount = value; }
         }
 
 
         /// <summary>
-        /// The interval between frames of the animation.
+        /// Number of animation frames to display per second
         /// </summary>
-        private int interval;
-
+        private int framesPerSecond;
         /// <summary>
-        /// The interval between frames of the animation.
+        /// Number of animation frames to display per second
         /// </summary>
-        public int Interval
+        public int FramesPerSecond
         {
-            get { return interval; }
-            set { interval = value; }
+            get { return framesPerSecond; }
+            set { framesPerSecond = value; }
         }
-
 
         /// <summary>
         /// If true, the animation loops.
         /// </summary>
-        private bool isLoop;
-
+        private bool looping;
         /// <summary>
         /// If true, the animation loops.
         /// </summary>
-        public bool IsLoop
+        public bool Looping
         {
-            get { return isLoop; }
-            set { isLoop = value; }
+            get { return looping; }
+            set { looping = value; }
         }
+        
+        private AnimationState state;
+        [ContentSerializerIgnore]
+        public AnimationState State
+        {
+            get { return state; }
+            set { state = value; }
+        }
+
+        
+        private int currentFrame;
+        [ContentSerializerIgnore]
+        public int CurrentFrame
+        {
+            get { return currentFrame; }
+            set { currentFrame = value; }
+        }
+
+        /// <summary>
+        /// Time elapsed since the beginning of this animation.
+        /// Does not increase while the animation is stopped.
+        /// </summary>
+        private double timeElapsed;
+        [ContentSerializerIgnore]
+        public double TimeElapsed
+        {
+            get { return timeElapsed; }
+            set { timeElapsed = value; }
+        }
+
+        #endregion
 
 
         #region Constructors
@@ -106,22 +117,56 @@ namespace OHQData
         /// <summary>
         /// Creates a new Animation object.
         /// </summary>
-        public Animation() { }
+        private Animation()
+        {
+            CurrentFrame = 1;
+            State = AnimationState.Stopped;
+            TimeElapsed = 0;
+        }
 
 
         /// <summary>
         /// Creates a new Animation object by full specification.
         /// </summary>
-        public Animation(string name, int startingFrame, int endingFrame, int interval,
-            bool isLoop)
+        public Animation(string textureName, int frameCount, int framesPerSecond, bool looping) : this()
         {
-            this.Name = name;
-            this.StartingFrame = startingFrame;
-            this.EndingFrame = endingFrame;
-            this.Interval = interval;
-            this.IsLoop = isLoop;
+            this.TextureName = textureName;
+            this.FrameCount = frameCount;
+            this.FramesPerSecond = framesPerSecond;
+            this.Looping = looping;
         }
 
+
+        #endregion
+
+
+        #region Controls
+
+        public void stop()
+        {
+            state = AnimationState.Stopped;
+        }
+        public void play()
+        {
+            state = AnimationState.Playing;
+        }
+        public void pause()   {
+            if (state == AnimationState.Playing)
+            {
+                state = AnimationState.Paused;
+            }
+        }
+        public void unpause()
+        {
+            if (state == AnimationState.Paused)
+            {
+                state = AnimationState.Playing;
+            }
+        }
+        public void reset()
+        {
+            CurrentFrame = 1;
+        }
 
         #endregion
 
@@ -148,11 +193,10 @@ namespace OHQData
 
                 animation.AssetName = input.AssetName;
 
-                animation.Name = input.ReadString();
-                animation.StartingFrame = input.ReadInt32();
-                animation.EndingFrame = input.ReadInt32();
-                animation.Interval = input.ReadInt32();
-                animation.IsLoop = input.ReadBoolean();
+                animation.TextureName = input.ReadString();
+                animation.FrameCount = input.ReadInt32();
+                animation.FramesPerSecond = input.ReadInt32();
+                animation.Looping = input.ReadBoolean();
 
                 return animation;
             }
@@ -160,5 +204,12 @@ namespace OHQData
 
 
         #endregion
+    }
+
+    public enum AnimationState
+    {
+        Paused,
+        Stopped,
+        Playing,
     }
 }
