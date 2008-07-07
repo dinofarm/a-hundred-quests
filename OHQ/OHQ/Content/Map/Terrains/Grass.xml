@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
-	<Asset Type="OHQData.Terrain">
+	<Asset Type="OHQProcessors.Terrain.TerrainData">
+		<SpriteName>Grass</SpriteName>
+		<SpriteSheet>Textures\Map\Terrains\SpriteSheet.xml</SpriteSheet>			
 	</Asset>
 </XnaContent>

@@ -32,10 +32,26 @@ namespace OHQData.Sprites
         }
         public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
         {
+            // This makes sure that sprites are drawn in their natural size.
+            Rectangle target = AdjustDestinationRectangle(destinationRectangle);
+
             spriteBatch.Draw(spriteSheet.Texture,
-                             destinationRectangle,
+                             target,//destinationRectangle,
                              sourceRectangle,
                              Color.White); // TODO: refactor the background color as a property?
+        }
+
+        private Rectangle AdjustDestinationRectangle(Rectangle destinationRectangle)
+        {
+            int xMod = (sourceRectangle.Width - destinationRectangle.Width)/2;
+            int yMod = (sourceRectangle.Height - destinationRectangle.Height);
+
+
+            Rectangle target = new Rectangle(destinationRectangle.X-xMod,
+                                             destinationRectangle.Y-yMod,
+                                             sourceRectangle.Width,
+                                             sourceRectangle.Height);
+            return target;
         }
     }
 }

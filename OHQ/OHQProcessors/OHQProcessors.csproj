@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\AnimationWriter.cs" />
+    <Compile Include="Map\TerrainProcessor.cs" />
     <Compile Include="Map\TerrainWriter.cs" />
     <Compile Include="OHQWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +65,7 @@
     </Compile>
     <Compile Include="Sprites\SpritePacker.cs" />
     <Compile Include="Sprites\SpriteSheetContent.cs" />
+    <Compile Include="Sprites\SpriteSheetFileInput.cs" />
     <Compile Include="Sprites\SpriteSheetProcessor.cs" />
     <Compile Include="Sprites\SpriteSheetWriter.cs" />
     <Compile Include="WorldObjectWriter.cs" />

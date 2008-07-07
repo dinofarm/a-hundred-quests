@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
-	<Asset Type="OHQData.Terrain">
+	<Asset Type="OHQProcessors.Terrain.TerrainData">
+		<SpriteName>Water</SpriteName>
+		<SpriteSheet>Textures\Map\Terrains\SpriteSheet.xml</SpriteSheet>
+		<IsWalkable>false</IsWalkable>
+		<Borders>true</Borders>
+		<BorderName>WaterBorder</BorderName>
+		<AnimationFrames>2</AnimationFrames>
 	</Asset>
 </XnaContent>

@@ -607,16 +607,16 @@ namespace OHQData
 
                     if (terrain == wasteland || terrain == water)
                     {
-                        if (terrainAt(column, row - 1) != terrain) { tile.addBorder(Tile.BorderEnum.East); } // 00000001  east
-                        if (terrainAt(column - 1, row) != terrain) { tile.addBorder(Tile.BorderEnum.North); } // 00000010  north
-                        if (terrainAt(column, row + 1) != terrain) { tile.addBorder(Tile.BorderEnum.West); } // 00000100  west
-                        if (terrainAt(column + 1, row) != terrain) { tile.addBorder(Tile.BorderEnum.South); } // 00001000  south
+                        if (terrainAt(column - 1, row) != terrain) { tile.addBorder(Tile.BorderEnum.West); }
+                        if (terrainAt(column, row - 1) != terrain) { tile.addBorder(Tile.BorderEnum.North); }
+                        if (terrainAt(column + 1, row) != terrain) { tile.addBorder(Tile.BorderEnum.East); }
+                        if (terrainAt(column, row + 1) != terrain) { tile.addBorder(Tile.BorderEnum.South); }
 
                         // Diagonal border checks must be done AFTER the horizontal and vertical border checks.
-                        if (terrainAt(column - 1, row - 1) != terrain) { tile.addBorder(Tile.BorderEnum.NorthWest); } // 00010000  north-east
-                        if (terrainAt(column - 1, row + 1) != terrain) { tile.addBorder(Tile.BorderEnum.NorthEast); } // 00100000  north-west
-                        if (terrainAt(column + 1, row + 1) != terrain) { tile.addBorder(Tile.BorderEnum.SouthEast); } // 01000000  south-west
-                        if (terrainAt(column + 1, row - 1) != terrain) { tile.addBorder(Tile.BorderEnum.SouthWest); } // 10000000  south-east
+                        if (terrainAt(column - 1, row - 1) != terrain) { tile.addBorder(Tile.BorderEnum.NorthWest); }
+                        if (terrainAt(column + 1, row - 1) != terrain) { tile.addBorder(Tile.BorderEnum.NorthEast); }
+                        if (terrainAt(column + 1, row + 1) != terrain) { tile.addBorder(Tile.BorderEnum.SouthEast); }
+                        if (terrainAt(column - 1, row + 1) != terrain) { tile.addBorder(Tile.BorderEnum.SouthWest); } 
                     }
                 }
             }

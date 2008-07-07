@@ -119,6 +119,16 @@ namespace OHQData
             get { return border; }
         }
 
+        private int BorderSides()
+        {
+            return border & 0xF;
+        }
+
+        private int BorderCorners()
+        {
+            return 16 + ((border >> 4) & 0xFF);
+        }
+
         #endregion
         #region Initialization
 
@@ -141,26 +151,10 @@ namespace OHQData
         /// </summary>
         public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
         {
-            // TODO: fix how larger terrains such as the mountain (50x50 px) are drawn
-
-
-
-            // draw terrain
-            //terrain.sprite.draw(spriteBatch, destinationRectangle);
-            terrain.draw(spriteBatch, destinationRectangle);
-
-            //int terrainIndex = terrain.SpriteSheet.GetIndex(terrain.Name);
-            //Rectangle sourceRectangle = terrain.SpriteSheet.SourceRectangle(terrainIndex);
-
-            //spriteBatch.Draw(terrain.SpriteSheet.Texture,
-            //                 destinationRectangle,
-            //                 sourceRectangle,
-            //                 Color.White);
-
-
-
-            // draw structure on this tile (dungeon, forest, town, etc)
-            // TODO: draw structure
+            // TODO: Drawing of a tile is dependent on information in the tile, not
+            // just information in the Terrain class. So the draing logic should be in the 
+            // Tile class, with information taken from the Terrain class.
+            terrain.draw(spriteBatch, destinationRectangle,BorderSides(),BorderCorners());
         }
 
         #endregion

@@ -10,6 +10,7 @@ namespace OHQData
 {
     public class Terrain : ContentObject
     {
+        #region Name
         public string Name
         {
             get
@@ -21,17 +22,50 @@ namespace OHQData
                 return name;
             }
         }
+        #endregion
 
-
+        #region Walkable
         private bool isWalkable = true;
 
-        [ContentSerializerIgnore]
+        [ContentSerializer(Optional = true)]
         public bool IsWalkable
         {
             get { return isWalkable; }
             set { isWalkable = value; }
         }
+        #endregion
+        #region Borders
+        private string borderName = "";
 
+        [ContentSerializer(Optional = true)]
+        public string BorderName
+        {
+            get { return borderName; }
+            set { borderName = value; }
+        }
+
+        private bool border = false;
+
+        [ContentSerializer(Optional = true)]
+        public bool Borders
+        {
+            get { return border; }
+            set { border = value; }
+        }
+        #endregion
+
+        #region AnimationFrames
+        private int animationFrames = 1;
+
+        [ContentSerializer(Optional = true)]
+        public int AnimationFrames
+        {
+            get { return animationFrames; }
+            set { animationFrames = value; }
+        }
+        #endregion
+
+        #region Sprite Data
         private static SpriteSheet spriteSheet;
 
         [ContentSerializerIgnore]
@@ -41,14 +75,15 @@ namespace OHQData
             set { spriteSheet = value; }
         }
 
-        private Sprite sprite;
-
+        private TerrainSprite sprite;
+        /*
         [ContentSerializerIgnore]
         public Sprite Sprite
         {
             get { return sprite; }
             set { sprite = value; }
-        }
+        }*/
+        #endregion 
 
         #region Count
 
@@ -88,9 +123,9 @@ namespace OHQData
 
         }
 
-        public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
+        public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle, int BorderSides,int BorderCorners)
         {
-            sprite.draw(spriteBatch, destinationRectangle);
+            sprite.draw(spriteBatch, destinationRectangle, BorderSides,BorderCorners);
         }
 
         #endregion 
@@ -98,11 +133,13 @@ namespace OHQData
 
         #region Content type reader
 
+
         /// <summary>
         /// Read a Terrain object from the content pipeline.
         /// </summary>
         public class TerrainReader : ContentTypeReader<Terrain>
         {
+
             protected override Terrain Read(ContentReader input, Terrain existingInstance)
             {
                 Terrain terrain = existingInstance;
@@ -111,22 +148,76 @@ namespace OHQData
                     terrain = new Terrain();
                 }
 
-                terrain.AssetName = input.AssetName;
+                terrain.AssetName = input.ReadString();
+                terrain.SpriteSheet = input.ReadExternalReference<SpriteSheet>();
+                terrain.IsWalkable = input.ReadBoolean();
+                terrain.Borders = input.ReadBoolean();
+                terrain.BorderName = input.ReadString();
+                terrain.AnimationFrames = input.ReadInt32();
 
-                if (terrain.SpriteSheet == null)
-                {
-                    string path = @"Textures\Map\Terrains\SpriteSheet";
-                    terrain.SpriteSheet = input.ContentManager.Load<SpriteSheet>(path);
-                }
-
-                terrain.Sprite = new Sprite(terrain.Name, terrain.SpriteSheet);
-
+                terrain.sprite = new TerrainSprite(terrain);
 
                 return terrain;
             }
         }
 
-
         #endregion
+    }
+
+    // TODO: This one should be redone as two animating sprites.
+    // At the very least it must handle animating terrains.
+    internal class TerrainSprite
+    {
+        Terrain terrain;
+
+        public TerrainSprite(Terrain t)
+        {
+            terrain = t;
+        }
+
+
+        public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle, int BorderSides, int BorderCorners) 
+        {
+            // TODO: fix how larger terrains such as the mountain (50x50 px) are drawn
+
+            // draw terrain
+            if (terrain.AnimationFrames > 1)
+            {
+                int terrainIndex = terrain.SpriteSheet.GetIndex(terrain.Name + "_0");
+                drawTileTerrain(spriteBatch, destinationRectangle, terrainIndex);
+            }
+            else
+            {
+                int terrainIndex = terrain.SpriteSheet.GetIndex(terrain.Name);
+                drawTileTerrain(spriteBatch, destinationRectangle, terrainIndex);
+            }
+
+            if (terrain.Borders)
+            {
+                string tileType = terrain.BorderName + "_";
+                if (BorderSides != 0)
+                {
+                    int terrainIndex = terrain.SpriteSheet.GetIndex(tileType + BorderSides);
+                    drawTileTerrain(spriteBatch, destinationRectangle, terrainIndex);
+                }
+                if (BorderCorners != 0)
+                {
+                    int terrainIndex = terrain.SpriteSheet.GetIndex(tileType + BorderCorners);
+                    drawTileTerrain(spriteBatch, destinationRectangle, terrainIndex);
+                }
+            }
+
+            // draw structure on this tile (dungeon, forest, town, etc)
+            // TODO: draw structure
+        }
+
+        private void drawTileTerrain(SpriteBatch spriteBatch, Rectangle destinationRectangle, int terrainIndex)
+        {
+            spriteBatch.Draw(terrain.SpriteSheet.Texture, // texture
+                             destinationRectangle, // destination rectangle
+                             terrain.SpriteSheet.SourceRectangle(terrainIndex), // source rectangle (from the sprite sheet)
+                             Color.White);
+        }
+
     }
 }

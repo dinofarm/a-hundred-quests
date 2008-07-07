@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
-	<Asset Type="OHQData.Terrain">
+	<Asset Type="OHQProcessors.Terrain.TerrainData">
+		<SpriteName>Wasteland</SpriteName>
+		<SpriteSheet>Textures\Map\Terrains\SpriteSheet.xml</SpriteSheet>
+		<Borders>true</Borders>
+		<BorderName>GrassBorder</BorderName>
 	</Asset>
 </XnaContent>

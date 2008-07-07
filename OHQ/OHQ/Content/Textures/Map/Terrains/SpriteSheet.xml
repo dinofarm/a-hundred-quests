@@ -1,10 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <XnaContent>
-	<Asset Type="System.String[]">
-		<Item>Textures\Map\Terrains\Grass.png</Item>
-		<Item>Textures\Map\Terrains\Hill.png</Item>
-		<Item>Textures\Map\Terrains\Mountain.png</Item>
-		<Item>Textures\Map\Terrains\Wasteland.png</Item>
-		<Item>Textures\Map\Terrains\Water.png</Item>
+	<Asset Type="OHQProcessors.SpriteSheetFileInput">
+		<Entries>
+			<Item>
+				<name>Textures\Map\Terrains\Grass.png</name>
+			</Item>
+
+			<Item>
+				<name>Textures\Map\Terrains\Hill.png</name>
+			</Item>
+
+			<Item>
+				<name>Textures\Map\Terrains\Mountain.png</name>
+			</Item>
+
+			<Item>
+				<name>Textures\Map\Terrains\Wasteland.png</name>
+			</Item>
+			<Item>
+				<name>Textures\Map\Borders\GrassBorder.png</name>
+				<numberOfFrames>32</numberOfFrames>
+				<FrameWidth>40</FrameWidth>
+				<FrameHeight>40</FrameHeight>
+			</Item>
+
+			<Item>
+				<name>Textures\Map\Terrains\Water.png</name>
+				<numberOfFrames>4</numberOfFrames>
+				<FrameWidth>40</FrameWidth>
+				<FrameHeight>40</FrameHeight>
+			</Item>
+			<Item>
+				<name>Textures\Map\Borders\WaterBorder.png</name>
+				<numberOfFrames>64</numberOfFrames>
+				<FrameWidth>40</FrameWidth>
+				<FrameHeight>40</FrameHeight>
+			</Item>
+		</Entries>
 	</Asset>
 </XnaContent>
