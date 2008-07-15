@@ -41,7 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\AnimationWriter.cs" />
-    <Compile Include="Map\TerrainProcessor.cs" />
     <Compile Include="Map\TerrainWriter.cs" />
     <Compile Include="OHQWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

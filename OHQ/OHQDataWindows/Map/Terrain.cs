@@ -149,7 +149,7 @@ namespace OHQData
                 }
 
                 terrain.AssetName = input.ReadString();
-                terrain.SpriteSheet = input.ReadExternalReference<SpriteSheet>();
+                terrain.SpriteSheet = input.ContentManager.Load<SpriteSheet>(input.ReadString());
                 terrain.IsWalkable = input.ReadBoolean();
                 terrain.Borders = input.ReadBoolean();
                 terrain.BorderName = input.ReadString();

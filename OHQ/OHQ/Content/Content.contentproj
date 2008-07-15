@@ -125,35 +125,35 @@
     <Compile Include="Map\Terrains\Grass.xml">
       <Name>Grass</Name>
       <Importer>XmlImporter</Importer>
-      <Processor>TerrainProcessor</Processor>
+      <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Map\Terrains\Water.xml">
       <Name>Water</Name>
       <Importer>XmlImporter</Importer>
-      <Processor>TerrainProcessor</Processor>
+      <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Map\Terrains\Hill.xml">
       <Name>Hill</Name>
       <Importer>XmlImporter</Importer>
-      <Processor>TerrainProcessor</Processor>
+      <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Map\Terrains\Mountain.xml">
       <Name>Mountain</Name>
       <Importer>XmlImporter</Importer>
-      <Processor>TerrainProcessor</Processor>
+      <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Map\Terrains\Wasteland.xml">
       <Name>Wasteland</Name>
       <Importer>XmlImporter</Importer>
-      <Processor>TerrainProcessor</Processor>
+      <Processor>PassThroughProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
