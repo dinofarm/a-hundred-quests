@@ -14,16 +14,17 @@ namespace OHQData.Sprites
     /// </summary>
     public class Sprite
     {
-        private Rectangle sourceRectangle;
-        private SpriteSheet spriteSheet;
+        // A basic sprite only has a single frame.
+        private Frame frame;
 
         public Sprite(string name, SpriteSheet spriteSheet)
         {
             Debug.Assert(name.Length > 0, "sprite name was an empty string");
             Debug.Assert(spriteSheet != null, "sprite sheet was null");
 
-            this.sourceRectangle = spriteSheet.SourceRectangle(name);
-            this.spriteSheet = spriteSheet;
+            frame = spriteSheet.SourceRectangle(name);
+            //this.sourceRectangle = spriteSheet.SourceRectangle(name);
+            //this.spriteSheet = spriteSheet;
         }
 
         public void update()
@@ -32,26 +33,8 @@ namespace OHQData.Sprites
         }
         public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
         {
-            // This makes sure that sprites are drawn in their natural size.
-            Rectangle target = AdjustDestinationRectangle(destinationRectangle);
-
-            spriteBatch.Draw(spriteSheet.Texture,
-                             target,//destinationRectangle,
-                             sourceRectangle,
-                             Color.White); // TODO: refactor the background color as a property?
-        }
-
-        private Rectangle AdjustDestinationRectangle(Rectangle destinationRectangle)
-        {
-            int xMod = (sourceRectangle.Width - destinationRectangle.Width)/2;
-            int yMod = (sourceRectangle.Height - destinationRectangle.Height);
-
-
-            Rectangle target = new Rectangle(destinationRectangle.X-xMod,
-                                             destinationRectangle.Y-yMod,
-                                             sourceRectangle.Width,
-                                             sourceRectangle.Height);
-            return target;
+            Point p = new Point(destinationRectangle.X,destinationRectangle.Y);
+            frame.draw(spriteBatch,p);
         }
     }
 }

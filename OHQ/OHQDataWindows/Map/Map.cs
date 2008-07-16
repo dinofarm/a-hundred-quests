@@ -693,7 +693,7 @@ namespace OHQData
                 int x = 0;
                 for (int column = centerX - 16; column <= centerX + 16; column++)
                 {
-                    drawTile(spriteBatch, row, column, x, y, Tile.SizePx, Tile.SizePx);
+                    drawTile(spriteBatch, row, column, x, y);
                     x += Tile.SizePx;
                 }
                 y += Tile.SizePx;
@@ -707,10 +707,10 @@ namespace OHQData
         /// <param name="column">column coordinate of tile</param>
         public void drawTile(SpriteBatch spriteBatch,
                              int row, int column,
-                             int x, int y, int width, int height)
+                             int x, int y)
         {
             Tile tile = getTile(column, row);//getTile(row, column);
-            Rectangle position = new Rectangle(x, y, width, height);
+            Point position = new Point(x, y);
             tile.draw(spriteBatch, position);
         }
 

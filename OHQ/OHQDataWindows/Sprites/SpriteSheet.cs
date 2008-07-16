@@ -17,6 +17,33 @@ using Microsoft.Xna.Framework.Content;
 
 namespace OHQData.Sprites
 {
+
+    /// <summary>
+    /// This is an encapsulation of a rectangular piece of graphics that is stored in a SpriteSheet.
+    /// This class might also contain the center point of a graphic, though I'd say
+    /// it should just be the "blob o' pixels".
+    /// </summary>
+    public class Frame
+    {
+        // Source of the rectangle.
+        private SpriteSheet sheet;
+
+        // What area to draw from the spriteSheet
+        private Rectangle SourceRectangle;
+
+        internal Frame(SpriteSheet sheet, Rectangle source)
+        {
+            this.sheet = sheet;
+            SourceRectangle = source;
+        }
+
+        public void draw(SpriteBatch spriteBatch, Point topLeft)
+        {
+            Rectangle destination = new Rectangle(topLeft.X, topLeft.Y, SourceRectangle.Width, SourceRectangle.Height);
+            spriteBatch.Draw(sheet.Texture, destination, SourceRectangle, Color.White);
+        }
+    }
+
     /// <summary>
     /// A sprite sheet contains many individual sprite images, packed into different
     /// areas of a single larger texture, along with information describing where in
@@ -66,23 +93,23 @@ namespace OHQData.Sprites
         /// <summary>
         /// Looks up the location of the specified sprite within the big texture.
         /// </summary>
-        public Rectangle SourceRectangle(string spriteName)
+        public Frame SourceRectangle(string spriteName)
         {
             int spriteIndex = GetIndex(spriteName);
 
-            return spriteRectangles[spriteIndex];
+            return new Frame(this, spriteRectangles[spriteIndex]);
         }
 
 
         /// <summary>
         /// Looks up the location of the specified sprite within the big texture.
         /// </summary>
-        public Rectangle SourceRectangle(int spriteIndex)
+        public Frame SourceRectangle(int spriteIndex)
         {
             if ((spriteIndex < 0) || (spriteIndex >= spriteRectangles.Length))
                 throw new ArgumentOutOfRangeException("spriteIndex");
 
-            return spriteRectangles[spriteIndex];
+            return new Frame(this, spriteRectangles[spriteIndex]);
         }
 
 

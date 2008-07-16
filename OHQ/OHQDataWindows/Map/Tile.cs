@@ -149,12 +149,12 @@ namespace OHQData
         /// <summary>
         /// Draw the tile
         /// </summary>
-        public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
+        public void draw(SpriteBatch spriteBatch, Point point)
         {
             // TODO: Drawing of a tile is dependent on information in the tile, not
             // just information in the Terrain class. So the draing logic should be in the 
             // Tile class, with information taken from the Terrain class.
-            terrain.draw(spriteBatch, destinationRectangle,BorderSides(),BorderCorners());
+            terrain.draw(spriteBatch, point, BorderSides(), BorderCorners());
         }
 
         #endregion

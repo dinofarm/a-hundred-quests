@@ -123,9 +123,9 @@ namespace OHQData
 
         }
 
-        public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle, int BorderSides,int BorderCorners)
+        public void draw(SpriteBatch spriteBatch, Point point, int BorderSides,int BorderCorners)
         {
-            sprite.draw(spriteBatch, destinationRectangle, BorderSides,BorderCorners);
+            sprite.draw(spriteBatch, point, BorderSides,BorderCorners);
         }
 
         #endregion 
@@ -164,8 +164,7 @@ namespace OHQData
         #endregion
     }
 
-    // TODO: This one should be redone as two animating sprites.
-    // At the very least it must handle animating terrains.
+    // TODO: TEliminate this abomination! Or at least make it differently.
     internal class TerrainSprite
     {
         Terrain terrain;
@@ -176,7 +175,7 @@ namespace OHQData
         }
 
 
-        public void draw(SpriteBatch spriteBatch, Rectangle destinationRectangle, int BorderSides, int BorderCorners) 
+        public void draw(SpriteBatch spriteBatch, Point point, int BorderSides, int BorderCorners) 
         {
             // TODO: fix how larger terrains such as the mountain (50x50 px) are drawn
 
@@ -184,12 +183,12 @@ namespace OHQData
             if (terrain.AnimationFrames > 1)
             {
                 int terrainIndex = terrain.SpriteSheet.GetIndex(terrain.Name + "_0");
-                drawTileTerrain(spriteBatch, destinationRectangle, terrainIndex);
+                drawTileTerrain(spriteBatch, point, terrainIndex);
             }
             else
             {
                 int terrainIndex = terrain.SpriteSheet.GetIndex(terrain.Name);
-                drawTileTerrain(spriteBatch, destinationRectangle, terrainIndex);
+                drawTileTerrain(spriteBatch, point, terrainIndex);
             }
 
             if (terrain.Borders)
@@ -198,25 +197,20 @@ namespace OHQData
                 if (BorderSides != 0)
                 {
                     int terrainIndex = terrain.SpriteSheet.GetIndex(tileType + BorderSides);
-                    drawTileTerrain(spriteBatch, destinationRectangle, terrainIndex);
+                    drawTileTerrain(spriteBatch, point, terrainIndex);
                 }
                 if (BorderCorners != 0)
                 {
                     int terrainIndex = terrain.SpriteSheet.GetIndex(tileType + BorderCorners);
-                    drawTileTerrain(spriteBatch, destinationRectangle, terrainIndex);
+                    drawTileTerrain(spriteBatch, point, terrainIndex);
                 }
             }
 
-            // draw structure on this tile (dungeon, forest, town, etc)
-            // TODO: draw structure
         }
 
-        private void drawTileTerrain(SpriteBatch spriteBatch, Rectangle destinationRectangle, int terrainIndex)
+        private void drawTileTerrain(SpriteBatch spriteBatch, Point point, int terrainIndex)
         {
-            spriteBatch.Draw(terrain.SpriteSheet.Texture, // texture
-                             destinationRectangle, // destination rectangle
-                             terrain.SpriteSheet.SourceRectangle(terrainIndex), // source rectangle (from the sprite sheet)
-                             Color.White);
+            terrain.SpriteSheet.SourceRectangle(terrainIndex).draw(spriteBatch, point);
         }
 
     }
