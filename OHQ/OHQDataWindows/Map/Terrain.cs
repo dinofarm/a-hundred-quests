@@ -177,40 +177,35 @@ namespace OHQData
 
         public void draw(SpriteBatch spriteBatch, Point point, int BorderSides, int BorderCorners) 
         {
-            // TODO: fix how larger terrains such as the mountain (50x50 px) are drawn
 
-            // draw terrain
-            if (terrain.AnimationFrames > 1)
-            {
-                int terrainIndex = terrain.SpriteSheet.GetIndex(terrain.Name + "_0");
-                drawTileTerrain(spriteBatch, point, terrainIndex);
-            }
-            else
-            {
-                int terrainIndex = terrain.SpriteSheet.GetIndex(terrain.Name);
-                drawTileTerrain(spriteBatch, point, terrainIndex);
-            }
+            // Placeholder, replace all this with animated sprite.
+            drawTileTerrain(spriteBatch, point);
 
             if (terrain.Borders)
             {
-                string tileType = terrain.BorderName + "_";
+                string tileType = terrain.BorderName;
                 if (BorderSides != 0)
                 {
-                    int terrainIndex = terrain.SpriteSheet.GetIndex(tileType + BorderSides);
-                    drawTileTerrain(spriteBatch, point, terrainIndex);
+                    drawTileBorder(spriteBatch, point, BorderSides);
                 }
-                if (BorderCorners != 0)
+                if (BorderCorners != 16)
                 {
-                    int terrainIndex = terrain.SpriteSheet.GetIndex(tileType + BorderCorners);
-                    drawTileTerrain(spriteBatch, point, terrainIndex);
+                    drawTileBorder(spriteBatch, point, BorderCorners);
                 }
             }
 
         }
 
-        private void drawTileTerrain(SpriteBatch spriteBatch, Point point, int terrainIndex)
+        private void drawTileTerrain(SpriteBatch spriteBatch, Point point)
         {
-            terrain.SpriteSheet.SourceRectangle(terrainIndex).draw(spriteBatch, point);
+            int frameIndex = terrain.SpriteSheet.GetIndex(terrain.Name);
+            terrain.SpriteSheet.SourceRectangle(frameIndex).draw(spriteBatch, point);
+        }
+
+        private void drawTileBorder(SpriteBatch spriteBatch, Point point, int borderIndex)
+        {
+            int frameIndex = terrain.SpriteSheet.GetIndex(this.terrain.BorderName) + borderIndex;
+            terrain.SpriteSheet.SourceRectangle(frameIndex).draw(spriteBatch, point);
         }
 
     }

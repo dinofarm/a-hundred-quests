@@ -75,6 +75,7 @@ namespace OHQProcessors
 
         private void PackImages()
         {
+
             // Pack all the sprites into a single large texture.
             BitmapContent packedSprites = SpritePacker.PackSprites(sourceSprites,
                                                                     spriteSheet.SpriteRectangles,
@@ -85,6 +86,8 @@ namespace OHQProcessors
 
         private void LoadImage(SpriteSheetEntry imageFile)
         {
+            spriteSheet.SpriteNames.Add(imageFile.GetTrimmedFilename(), sourceSprites.Count);
+
             if (imageFile.numberOfFrames <= 1)
             {
                 LoadSingleFrame(imageFile);
@@ -100,7 +103,6 @@ namespace OHQProcessors
             TextureContent texture = LoadTextureIntoMemory(imageFile, context);
 
             // Store the name of this sprite.
-            spriteSheet.SpriteNames.Add(imageFile.GetTrimmedFilename(), sourceSprites.Count);
             sourceSprites.Add(texture.Faces[0][0]);
             return;
         }
@@ -117,7 +119,7 @@ namespace OHQProcessors
             int y = 0;
             for (int i = 0; i < imageFile.numberOfFrames; i++)
             {
-                ExtractFrame(imageFile, source, x, y, i);
+                ExtractFrame(imageFile, source, x, y);
 
                 x += imageFile.FrameWidth;
                 if (x >= sourceWidth)
@@ -128,13 +130,12 @@ namespace OHQProcessors
             }
         }
 
-        private void ExtractFrame(SpriteSheetEntry imageFile, BitmapContent source, int sourceX, int sourceY, int frameIndex)
+        private void ExtractFrame(SpriteSheetEntry imageFile, BitmapContent source, int sourceX, int sourceY)
         {
             BitmapContent extracted = new PixelBitmapContent<Color>(imageFile.FrameWidth, imageFile.FrameHeight);
             BitmapContent.Copy(source, new Rectangle(sourceX, sourceY, imageFile.FrameWidth, imageFile.FrameHeight),
                                 extracted, new Rectangle(0, 0, imageFile.FrameWidth, imageFile.FrameHeight));
 
-            spriteSheet.SpriteNames.Add(imageFile.GetTrimmedFilename() + "_" + frameIndex, sourceSprites.Count);
             sourceSprites.Add(extracted);
         }
 
