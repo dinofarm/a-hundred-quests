@@ -9,9 +9,23 @@ namespace OHQData.Skills
     // Skill, represents the skill tree for the player, abstract class defining all skills
     public abstract class Skill
     {
-        String name;
-        int level;
-        List<Requirement> requirements;
+        private String name;
+        public String Name
+        {
+            get { return name; }
+        }
+
+        private int level;
+        public int Level
+        {
+            get { return level; }
+        }
+
+        private List<Requirement> requirements;
+        public List<Requirement> Requirements
+        {
+            get { return requirements; }
+        }
 
         public Skill(String name, List<Requirement> requirements)
         {
@@ -23,19 +37,25 @@ namespace OHQData.Skills
         {
             public Skill skill;
             public int level;
+
+            public Requirement(Skill skill, int level)
+            {
+                this.skill = skill;
+                this.level = level;
+            }
         }
     }
 
     // StatSkill - Skills which add a point to STATS
     public class StatSkill : Skill   
     {
-        public Actor.Stat stat; // character stat to modify
+        public Actor.StatTypes statType; // character stat to modify
         public int bonus; // points to modify the stat by
 
         public StatSkill(String name, List<Requirement> requirements,
-                         Actor.Stat stat, int bonus) : base(name, requirements)
+                         Actor.StatTypes statType, int bonus) : base(name, requirements)
         {
-            this.stat = stat;
+            this.statType = statType;
             this.bonus = bonus;
         }
     }
@@ -43,7 +63,11 @@ namespace OHQData.Skills
     // ActiveSkill - Skills which are actively used in combat
     public class ActiveSkill : Skill
     {
-        int mpCost;
+        private int mpCost;
+        public int MpCost
+        {
+            get { return mpCost; }
+        }
 
         public ActiveSkill(String name, List<Requirement> requirements, int mpCost)
             : base(name, requirements)

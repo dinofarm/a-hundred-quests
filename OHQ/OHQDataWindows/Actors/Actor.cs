@@ -230,30 +230,30 @@ namespace OHQData.Actors
             skills.Add(skill);
 
             //apply
-            switch (skill.stat)
+            switch (skill.statType)
             {
-                case Stat.Str:
+                case StatTypes.Str:
                     stats.Str += skill.bonus;
                     break;
-                case Stat.Cha:
+                case StatTypes.Cha:
                     stats.Cha += skill.bonus;
                     break;
-                case Stat.Con:
+                case StatTypes.Con:
                     stats.Con += skill.bonus;
                     break;
-                case Stat.Dex:
+                case StatTypes.Dex:
                     stats.Dex += skill.bonus;
                     break;
-                case Stat.Int:
+                case StatTypes.Int:
                     stats.Int += skill.bonus;
                     break;
-                case Stat.Hp:
+                case StatTypes.Hp:
                     hp += skill.bonus;
                     break;
-                case Stat.Mp:
+                case StatTypes.Mp:
                     mp += skill.bonus;
                     break;
-                case Stat.MovePoints:
+                case StatTypes.MovePoints:
                     movePoints += skill.bonus;
                     break;
                 default:
@@ -281,6 +281,15 @@ namespace OHQData.Actors
             public int Int;
             public int Cha;
 
+            public StatsDatum(int Str, int Dex, int Con, int Int, int Cha)
+            {
+                this.Str = Str;
+                this.Dex = Dex;
+                this.Con = Con;
+                this.Int = Int;
+                this.Cha = Cha;
+            }
+
             public static StatsDatum operator +(StatsDatum stats1, StatsDatum stats2)
             {
                 StatsDatum newStats;
@@ -293,7 +302,7 @@ namespace OHQData.Actors
                 return newStats;
             }
         }
-        public enum Stat { Str, Dex, Con, Int, Cha, Hp, Mp, MovePoints }
+        public enum StatTypes { Str, Dex, Con, Int, Cha, Hp, Mp, MovePoints }
         public enum Genders { Male, Female, Other };
         public enum Races { Human, Dinoman, Fairy, Alien, Undead, Mechanical };
 

@@ -27,12 +27,11 @@ namespace UnitTests.Actors
             actor = new Avatar("Bob", Actor.Races.Dinoman, Actor.Genders.Male, mapCoordinates);
 
             // stats
-            Actor.StatsDatum stats = new Actor.StatsDatum();
-            stats.Cha = 5;
-            stats.Con = 6;
-            stats.Dex = 8;
-            stats.Int = 6;
-            stats.Str = 4;
+            Actor.StatsDatum stats = new Actor.StatsDatum(4, //Str
+                                                          8, //Dex
+                                                          6, //Con
+                                                          6, //Int
+                                                          5);//Cha
             actor.Stats = stats;
 
             // equipment
