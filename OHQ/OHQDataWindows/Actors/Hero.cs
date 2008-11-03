@@ -8,11 +8,13 @@ namespace OHQData.Actors
 {
     public class Hero : Actor
     {
+        
+        
         Player owner;  // TODO: review this var
 
-        public Hero(String name, Race race, Gender gender)
+        public Hero(String name, Races race, Genders gender)
             : base(name, race, gender) { }
-        public Hero(String name, Race race, Gender gender, Player owner)
+        public Hero(String name, Races race, Genders gender, Player owner)
             : base(name, race, gender)
         {
             this.owner = owner;

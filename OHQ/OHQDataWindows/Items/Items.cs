@@ -1,39 +1,49 @@
 using OHQData.Actors;
 using System.Collections.Generic;
+using System;
 
 namespace OHQData.Items
 {
+
     public class Weapon : Item
     {
         private int minDamage;
         private int maxDamage;
+
         public int Damage
         {
-            get { RandomNumber.Next(minDamage, maxDamage+1); }
+            get
+            {
+                Random random = new Random();
+                return random.Next(minDamage, maxDamage+1);
+            }
         }
         
         public int range;
         public int hitRate;
-        public bool twoHanded;
 
-        public Weapon(int minDamage, int maxDamage, int range, int twoHanded)
+        public Weapon(string name, int minDamage, int maxDamage, int range)
+            : base(name)
         {
             this.minDamage = minDamage;
             this.maxDamage = maxDamage;
             this.range = range;
-            this.twoHanded = twoHanded;
             this.hitRate = hitRate;
         }
 
         // TODO: different weapon behaviors
         // for example, arrows don't require a line of sight to the enemy - spears can attack 2 enemies deep (penetrate)
         // lasers DO require a line of sight
+
+        public enum Type { Sword, Polearm, Range };
     }
     public class Armor : Item
     {
         public int damageReduction;
         public int armorClass;
-        public Armor(int armorClass, int damageReduction) 
+               
+        public Armor(string name, int armorClass, int damageReduction)
+            : base(name)
         {
             this.armorClass = armorClass;
             this.damageReduction = damageReduction;
@@ -41,9 +51,17 @@ namespace OHQData.Items
     }
     public class Accessory : Item
     {
+        public Accessory(string name) : base(name)
+        {
+
+        }
     }
     public class Shield : Accessory
     {
+        public Shield(string name) : base(name)
+        {
+
+        }
     }
     public abstract class Item
     {
@@ -51,21 +69,31 @@ namespace OHQData.Items
 
         public int numSlots; // takes up 1 or 2 slots;
 
-        public Actor.Race race; // some items are only available in certain race's shops
+        public Actor.Races race; // some items are only available in certain race's shops
         public bool soldInShops;
         public int cost;
+        private string name;
+        public string Name
+        {
+            get { return name; }
+        }
 
-        private Actor.Stats requiredStats;
-        public Actor.Stats RequiredStats
+        private Actor.StatsDatum requiredStats;
+        public Actor.StatsDatum RequiredStats
         {
             get { return requiredStats + requiredStatsModifiers(); }
         }
 
         public List<Attribute> attributes;
 
-        private Actor.Stats requiredStatsModifiers()
+        public Item(String name)
         {
-            return new Actor.Stats();
+            this.name = name;
+        }
+
+        private Actor.StatsDatum requiredStatsModifiers()
+        {
+            return new Actor.StatsDatum();
         }
 
         // TODO: deprecated by requiredStatsModifiers() ??

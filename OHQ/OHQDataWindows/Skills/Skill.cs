@@ -6,7 +6,8 @@ using OHQData.Actors;
 
 namespace OHQData.Skills
 {
-    public class Skill
+    // Skill, represents the skill tree for the player, abstract class defining all skills
+    public abstract class Skill
     {
         String name;
         int level;
@@ -25,18 +26,21 @@ namespace OHQData.Skills
         }
     }
 
-    public class StatSkill : Skill
+    // StatSkill - Skills which add a point to STATS
+    public class StatSkill : Skill   
     {
         public Actor.Stat stat; // character stat to modify
         public int bonus; // points to modify the stat by
 
-        public StatSkill(String name, List<Requirements> requirements,
+        public StatSkill(String name, List<Requirement> requirements,
                          Actor.Stat stat, int bonus) : base(name, requirements)
         {
             this.stat = stat;
             this.bonus = bonus;
         }
     }
+
+    // ActiveSkill - Skills which are actively used in combat
     public class ActiveSkill : Skill
     {
         int mpCost;
@@ -47,12 +51,25 @@ namespace OHQData.Skills
             this.mpCost = mpCost;
         }
     }
+
+    // PassiveSkill - Skills which have a constant effect 
     public class PassiveSkill : Skill
     {
 
+        public PassiveSkill(String name, List<Requirement> requirements)
+            : base(name, requirements)
+        {
+        }
+
     }
+
+    // MagicSkill - Adding points here teaches player new spells
     public class MagicSkill : Skill
     {
+        public MagicSkill(String name, List<Requirement> requirements)
+            : base(name, requirements)
+        {
+        }
 
     }
 }

@@ -1,0 +1,13 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\OHQProcessors.Properties.Resources.resources
+obj\Debug\OHQProcessors.csproj.GenerateResource.Cache
+bin\Debug\OHQProcessors.dll
+bin\Debug\OHQProcessors.pdb
+bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.dll
+bin\Debug\Microsoft.Xna.Framework.dll
+bin\Debug\OHQDataWindows.dll
+bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.xml
+bin\Debug\OHQDataWindows.pdb
+bin\Debug\Microsoft.Xna.Framework.xml
+obj\Debug\OHQProcessors.dll
+obj\Debug\OHQProcessors.pdb

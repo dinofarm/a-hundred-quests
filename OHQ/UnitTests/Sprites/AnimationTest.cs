@@ -5,7 +5,7 @@ using NUnit.Framework;
 using NUnit.Framework.SyntaxHelpers;
 using OHQData.Sprites;
 
-namespace OHQData
+namespace UnitTests
 {
     [TestFixture]
     public class AnimationTest

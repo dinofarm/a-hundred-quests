@@ -5,7 +5,9 @@ namespace OHQData.Items
     public class Attribute
     {
         public List<Modifier> modifiers;
+        public Weapon.Type type;
     }
+
     // A Modifier is a chance (%) that a Statistic will be increased/decreased by some percentage
     // TODO:  - make sure weapons with 100% chance to do something reflect it as a core property in-game
     public class Modifier

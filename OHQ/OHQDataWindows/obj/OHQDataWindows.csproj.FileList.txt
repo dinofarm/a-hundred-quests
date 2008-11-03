@@ -1,0 +1,11 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\OHQDataWindows.dll
+bin\Debug\OHQDataWindows.pdb
+bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.dll
+bin\Debug\Microsoft.Xna.Framework.dll
+bin\Debug\nunit.framework.dll
+bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.xml
+bin\Debug\Microsoft.Xna.Framework.xml
+bin\Debug\nunit.framework.xml
+obj\Debug\OHQDataWindows.dll
+obj\Debug\OHQDataWindows.pdb

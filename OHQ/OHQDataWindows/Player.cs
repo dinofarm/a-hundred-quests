@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OHQData.Actors
+namespace OHQData
 {
-    public class Skill
+    public class Player
     {
     }
 }

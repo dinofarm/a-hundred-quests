@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\a-hundred-quests\OHQ\UnitTests\bin\Debug\UnitTests.dll" total="6" failures="1" not-run="0" date="2008-11-03" time="03:23:54">
+  <environment nunit-version="2.4.7.0" clr-version="2.0.50727.832" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\a-hundred-quests\OHQ\UnitTests\bin\Debug" machine-name="KEITHCOMPUTAR" user="Administrator" user-domain="KEITHCOMPUTAR" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite name="C:\a-hundred-quests\OHQ\UnitTests\bin\Debug\UnitTests.dll" success="False" time="0.172" asserts="0">
+    <results>
+      <test-suite name="UnitTests" success="False" time="0.172" asserts="0">
+        <results>
+          <test-suite name="Actors" success="False" time="0.172" asserts="0">
+            <results>
+              <test-suite name="ActorTest" success="False" time="0.156" asserts="0">
+                <results>
+                  <test-case name="UnitTests.Actors.ActorTest.AddExperience" executed="True" success="True" time="0.125" asserts="1" />
+                  <test-case name="UnitTests.Actors.ActorTest.Construction" executed="True" success="True" time="0.000" asserts="10" />
+                  <test-case name="UnitTests.Actors.ActorTest.Equipment" executed="True" success="True" time="0.016" asserts="4" />
+                  <test-case name="UnitTests.Actors.ActorTest.Level" executed="True" success="True" time="0.000" asserts="0" />
+                  <test-case name="UnitTests.Actors.ActorTest.SecondaryStats" executed="True" success="False" time="0.000" asserts="7">
+                    <failure>
+                      <message><![CDATA[  Expected: 0.60000000000000009d
+  But was:  0.59999999999999998d
+]]></message>
+                      <stack-trace><![CDATA[at UnitTests.Actors.ActorTest.SecondaryStats() in C:\a-hundred-quests\OHQ\UnitTests\Actors\ActorTest.cs:line 82
+]]></stack-trace>
+                    </failure>
+                  </test-case>
+                  <test-case name="UnitTests.Actors.ActorTest.Stats" executed="True" success="True" time="0.000" asserts="5" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

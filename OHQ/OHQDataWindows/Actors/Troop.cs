@@ -8,7 +8,7 @@ namespace OHQData.Actors
     {
         private int cost;
 
-        public Troop(String name, Race race, Gender gender, int cost)
+        public Troop(String name, Races race, Genders gender, int cost)
             : base(name, race, gender)
         {
             this.cost = cost;

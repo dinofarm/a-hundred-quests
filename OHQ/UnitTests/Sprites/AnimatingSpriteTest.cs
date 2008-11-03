@@ -6,7 +6,7 @@ using NUnit.Framework.SyntaxHelpers;
 using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Content;
 
-namespace OHQData
+namespace UnitTests
 {
     //[TestFixture]
     //public class AnimatingSpriteTest

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using NUnit.Framework;
 using NUnit.Framework.SyntaxHelpers;
+using OHQData;
 
-namespace OHQData
+namespace UnitTests
 {
     [TestFixture]
     public class TerrainTest

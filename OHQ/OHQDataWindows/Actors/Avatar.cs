@@ -9,7 +9,7 @@ namespace OHQData.Actors
     {
         Point mapCoordinates;
 
-        public Avatar(String name, Race race, Gender gender, Point mapCoordinates)
+        public Avatar(String name, Races race, Genders gender, Point mapCoordinates)
             : base(name, race, gender)
         {
             this.mapCoordinates = mapCoordinates;

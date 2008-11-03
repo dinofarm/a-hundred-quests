@@ -4,7 +4,7 @@ using System.Text;
 using NUnit.Framework;
 using NUnit.Framework.SyntaxHelpers;
 
-namespace OHQData
+namespace UnitTests
 {
     [TestFixture]
     public class SpriteTest

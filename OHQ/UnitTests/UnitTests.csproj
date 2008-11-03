@@ -36,9 +36,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors\ActorTest.cs" />
     <Compile Include="Map\TerrainTest.cs" />
     <Compile Include="OHQGameTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skills\SkillsTest.cs" />
     <Compile Include="Sprites\AnimatingSpriteTest.cs" />
     <Compile Include="Sprites\AnimationTest.cs" />
     <Compile Include="Sprites\SpriteTest.cs" />

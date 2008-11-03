@@ -12,7 +12,7 @@ namespace OHQData.Actors
         private List<Terrain> areas;
         private List<Monster> friends;
 
-        public Monster(String name, Race race, Gender gender, Point battleCoordinates,
+        public Monster(String name, Races race, Genders gender, Point battleCoordinates,
                        List<String> quotes, List<Terrain> areas, List<Monster> friends)
             : base(name, race, gender, battleCoordinates)
         {

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1017]C:\a-hundred-quests\OHQ\UnitTests\bin\Debug\UnitTests.dll</TopNode>
+  <SelectedNode>[0-1013]UnitTests.Actors.ActorTest.SecondaryStats</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1017]C:\a-hundred-quests\OHQ\UnitTests\bin\Debug\UnitTests.dll" Expanded="true">
+      <Nodes>
+        <Node UniqueName="[0-1018]UnitTests" Expanded="true">
+          <Nodes>
+            <Node UniqueName="[0-1019]UnitTests.Actors" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1010]UnitTests.Actors.ActorTest" Expanded="true">
+                  <Nodes>
+                    <Node UniqueName="[0-1014]UnitTests.Actors.ActorTest.AddExperience" />
+                    <Node UniqueName="[0-1011]UnitTests.Actors.ActorTest.Construction" />
+                    <Node UniqueName="[0-1016]UnitTests.Actors.ActorTest.Equipment" />
+                    <Node UniqueName="[0-1015]UnitTests.Actors.ActorTest.Level" />
+                    <Node UniqueName="[0-1013]UnitTests.Actors.ActorTest.SecondaryStats" />
+                    <Node UniqueName="[0-1012]UnitTests.Actors.ActorTest.Stats" />
+                  </Nodes>
+                </Node>
+              </Nodes>
+            </Node>
+            <Node UniqueName="[0-1002]UnitTests.AnimationTest" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1003]UnitTests.AnimationTest.Construction" />
+                <Node UniqueName="[0-1004]UnitTests.AnimationTest.Pause" />
+                <Node UniqueName="[0-1005]UnitTests.AnimationTest.Play" />
+                <Node UniqueName="[0-1006]UnitTests.AnimationTest.Stop" />
+              </Nodes>
+            </Node>
+            <Node UniqueName="[0-1000]UnitTests.SpriteTest" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1001]UnitTests.SpriteTest.Construction" />
+              </Nodes>
+            </Node>
+            <Node UniqueName="[0-1007]UnitTests.TerrainTest" Expanded="true">
+              <Nodes>
+                <Node UniqueName="[0-1008]UnitTests.TerrainTest.Count" />
+                <Node UniqueName="[0-1009]UnitTests.TerrainTest.Name" />
+              </Nodes>
+            </Node>
+          </Nodes>
+        </Node>
+      </Nodes>
+    </Node>
+  </Nodes>
+</VisualState>
