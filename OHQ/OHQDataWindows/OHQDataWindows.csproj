@@ -38,6 +38,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors\Actor.cs" />
+    <Compile Include="Actors\Avatar.cs" />
+    <Compile Include="Actors\Hero.cs" />
+    <Compile Include="Actors\Monster.cs" />
+    <Compile Include="Actors\Party.cs" />
+    <Compile Include="Actors\Skill.cs" />
+    <Compile Include="Actors\StatusEffect.cs" />
+    <Compile Include="Actors\Troop.cs" />
+    <Compile Include="Items\Attributes.cs" />
+    <Compile Include="Items\Items.cs" />
+    <Compile Include="Skills\Skill.cs" />
+    <Compile Include="Spells\Spell.cs" />
     <Compile Include="Sprites\AnimatingSprite.cs" />
     <Compile Include="Sprites\Animation.cs" />
     <Compile Include="Sprites\Sprite.cs" />
