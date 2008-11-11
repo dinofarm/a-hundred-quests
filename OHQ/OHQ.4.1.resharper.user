@@ -1,0 +1,40 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer>
+      <setting name="UsedSolutionBuilderID">0</setting>
+    </integer>
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="0EF14C5B-E170-41BA-B6F4-4F22E5C740B2/d:Actors/f:ActorTest.cs" caret="1184" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Troop.cs" caret="61" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Monster.cs" caret="645" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Hero.cs" caret="636" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Avatar.cs" caret="49" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Actor.cs" caret="6218" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/f:StatusEffect.cs" caret="136" scrollPosition="0|0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="0EF14C5B-E170-41BA-B6F4-4F22E5C740B2/d:Actors/f:ActorTest.cs" caret="13" scrollPosition="0|94" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Avatar.cs" caret="353" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Hero.cs" caret="1330" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Troop.cs" caret="98" scrollPosition="0|0" />
+      <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Avatar.cs" caret="45" scrollPosition="0|0" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>True</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <EnableUnitTesting>True</EnableUnitTesting>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="OHQ">
+</Property><Property Name="Solution File" Value="C:\a-hundred-quests\OHQ\OHQ.sln">
+</Property><Property Name="Date" Value="Monday, November 10, 2008">
+</Property><Property Name="Time" Value="21:59 PM">
+</Property></Properties><Event ErrorLevel="0" Project="OHQWindows" Source="OHQ\OHQWindows.csproj" Description="Upgraded XNA Game Studio nested content projects.">
+</Event><Event ErrorLevel="0" Project="OHQWindows" Source="OHQ\OHQWindows.csproj" Description="Upgraded XNA Game Studio project.">
+</Event><Event ErrorLevel="0" Project="OHQWindows" Source="OHQ\OHQWindows.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="OHQWindows" Source="OHQ\OHQWindows.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="OHQDataWindows" Source="OHQDataWindows\OHQDataWindows.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="OHQDataWindows" Source="OHQDataWindows\OHQDataWindows.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="OHQProcessors" Source="OHQProcessors\OHQProcessors.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="OHQProcessors" Source="OHQProcessors\OHQProcessors.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="UnitTests" Source="UnitTests\UnitTests.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="UnitTests" Source="UnitTests\UnitTests.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="OHQ.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="OHQ.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="OHQWindows" Source="OHQ\OHQWindows.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="OHQWindows" Source="OHQ\OHQWindows.csproj" Description="Upgraded XNA Framework References.">
+</Event><Event ErrorLevel="0" Project="OHQDataWindows" Source="OHQDataWindows\OHQDataWindows.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="OHQProcessors" Source="OHQProcessors\OHQProcessors.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="UnitTests" Source="UnitTests\UnitTests.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
