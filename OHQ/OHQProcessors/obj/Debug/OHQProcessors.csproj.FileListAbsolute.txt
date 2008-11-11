@@ -1,0 +1,9 @@
+C:\a-hundred-quests\OHQ\OHQProcessors\bin\Debug\OHQProcessors.dll
+C:\a-hundred-quests\OHQ\OHQProcessors\bin\Debug\OHQProcessors.pdb
+C:\a-hundred-quests\OHQ\OHQProcessors\bin\Debug\OHQDataWindows.dll
+C:\a-hundred-quests\OHQ\OHQProcessors\bin\Debug\OHQDataWindows.pdb
+C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\ResolveAssemblyReference.cache
+C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\OHQProcessors.Properties.Resources.resources
+C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\OHQProcessors.csproj.GenerateResource.Cache
+C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\OHQProcessors.dll
+C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\OHQProcessors.pdb

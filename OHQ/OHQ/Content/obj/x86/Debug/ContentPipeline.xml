@@ -8,7 +8,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\gamefont.xnb</Output>
-      <Time>2008-11-02T20:37:24.7749584-05:00</Time>
+      <Time>2008-11-10T21:06:22.5-05:00</Time>
     </Item>
     <Item>
       <Source>menufont.spritefont</Source>
@@ -17,7 +17,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\menufont.xnb</Output>
-      <Time>2008-11-02T20:37:24.7749584-05:00</Time>
+      <Time>2008-11-10T21:06:22.5-05:00</Time>
     </Item>
     <Item>
       <Source>background.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2008-11-02T20:37:24.7749584-05:00</Time>
+      <Time>2008-11-10T21:06:22.5-05:00</Time>
     </Item>
     <Item>
       <Source>blank.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\blank.xnb</Output>
-      <Time>2008-11-02T20:37:24.7749584-05:00</Time>
+      <Time>2008-11-10T21:06:22.5-05:00</Time>
     </Item>
     <Item>
       <Source>gradient.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\gradient.xnb</Output>
-      <Time>2008-11-02T20:37:24.7749584-05:00</Time>
+      <Time>2008-11-10T21:06:22.5-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\human_avatar_female_1.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\human_avatar_female_1.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\human_avatar_female_2.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\human_avatar_female_2.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\human_avatar_female_3.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\human_avatar_female_3.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\human_avatar_female_4.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\human_avatar_female_4.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\HumanAvatarMale1.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\HumanAvatarMale1.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\human_avatar_male_2.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\human_avatar_male_2.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\human_avatar_male_3.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\human_avatar_male_3.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\human_avatar_male_4.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\human_avatar_male_4.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Characters\Shadow.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Characters\Shadow.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Borders\Shroud.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Borders\Shroud.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Borders\GrassBorder.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Borders\GrassBorder.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Borders\WaterBorder.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Borders\WaterBorder.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Characters\Player.xml</Source>
@@ -161,7 +161,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Characters\Player.xnb</Output>
-      <Time>2008-11-02T20:37:24.6812084-05:00</Time>
+      <Time>2008-11-10T21:06:22.421875-05:00</Time>
     </Item>
     <Item>
       <Source>Map\Terrains\Grass.xml</Source>
@@ -170,7 +170,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Map\Terrains\Grass.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.46875-05:00</Time>
     </Item>
     <Item>
       <Source>Map\Terrains\Water.xml</Source>
@@ -179,7 +179,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Map\Terrains\Water.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.46875-05:00</Time>
     </Item>
     <Item>
       <Source>Map\Terrains\Hill.xml</Source>
@@ -188,7 +188,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Map\Terrains\Hill.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.46875-05:00</Time>
     </Item>
     <Item>
       <Source>Map\Terrains\Mountain.xml</Source>
@@ -197,7 +197,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Map\Terrains\Mountain.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.46875-05:00</Time>
     </Item>
     <Item>
       <Source>Map\Terrains\Wasteland.xml</Source>
@@ -206,7 +206,7 @@
       <Processor>PassThroughProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Map\Terrains\Wasteland.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.46875-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Terrains\SpriteSheet.xml</Source>
@@ -215,89 +215,90 @@
       <Processor>SpriteSheetProcessor</Processor>
       <Options>None</Options>
       <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\Textures\Map\Terrains\SpriteSheet.xnb</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
       <Dependency>
-        <Key>obj\x86\Debug\Textures\Map\Terrains\Grass%0.xml</Key>
-        <Value>2008-11-03T04:15:38.46225-05:00</Value>
+        <Key>obj\x86\Debug\Textures\Map\Terrains\Grass_0.xml</Key>
+        <Value>2008-11-10T22:49:54.953125-05:00</Value>
       </Dependency>
       <Dependency>
-        <Key>obj\x86\Debug\Textures\Map\Terrains\Hill%0.xml</Key>
-        <Value>2008-11-03T04:15:38.52475-05:00</Value>
+        <Key>obj\x86\Debug\Textures\Map\Terrains\Hill_0.xml</Key>
+        <Value>2008-11-10T22:49:55-05:00</Value>
       </Dependency>
       <Dependency>
-        <Key>obj\x86\Debug\Textures\Map\Terrains\Mountain%0.xml</Key>
-        <Value>2008-11-03T04:15:38.58725-05:00</Value>
+        <Key>obj\x86\Debug\Textures\Map\Terrains\Mountain_0.xml</Key>
+        <Value>2008-11-10T22:49:55.046875-05:00</Value>
       </Dependency>
       <Dependency>
-        <Key>obj\x86\Debug\Textures\Map\Terrains\Wasteland%0.xml</Key>
-        <Value>2008-11-03T04:15:38.64975-05:00</Value>
+        <Key>obj\x86\Debug\Textures\Map\Terrains\Wasteland_0.xml</Key>
+        <Value>2008-11-10T22:49:55.09375-05:00</Value>
       </Dependency>
       <Dependency>
-        <Key>obj\x86\Debug\Textures\Map\Borders\GrassBorder%0.xml</Key>
-        <Value>2008-11-03T04:15:38.77475-05:00</Value>
+        <Key>obj\x86\Debug\Textures\Map\Borders\GrassBorder_0.xml</Key>
+        <Value>2008-11-10T22:49:55.203125-05:00</Value>
       </Dependency>
       <Dependency>
-        <Key>obj\x86\Debug\Textures\Map\Terrains\Water%0.xml</Key>
-        <Value>2008-11-03T04:15:38.83725-05:00</Value>
+        <Key>obj\x86\Debug\Textures\Map\Terrains\Water_0.xml</Key>
+        <Value>2008-11-10T22:49:55.265625-05:00</Value>
       </Dependency>
       <Dependency>
-        <Key>obj\x86\Debug\Textures\Map\Borders\WaterBorder%0.xml</Key>
-        <Value>2008-11-03T04:15:39.040375-05:00</Value>
+        <Key>obj\x86\Debug\Textures\Map\Borders\WaterBorder_0.xml</Key>
+        <Value>2008-11-10T22:49:55.4375-05:00</Value>
       </Dependency>
     </Item>
     <Item>
       <Source>Textures\Map\Terrains\Grass.png</Source>
       <Importer>TextureImporter</Importer>
       <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\Textures\Map\Terrains\Grass%0.xml</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Output>obj\x86\Debug\Textures\Map\Terrains\Grass_0.xml</Output>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Terrains\Hill.png</Source>
       <Importer>TextureImporter</Importer>
       <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\Textures\Map\Terrains\Hill%0.xml</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Output>obj\x86\Debug\Textures\Map\Terrains\Hill_0.xml</Output>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Terrains\Mountain.png</Source>
       <Importer>TextureImporter</Importer>
       <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\Textures\Map\Terrains\Mountain%0.xml</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Output>obj\x86\Debug\Textures\Map\Terrains\Mountain_0.xml</Output>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Terrains\Wasteland.png</Source>
       <Importer>TextureImporter</Importer>
       <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\Textures\Map\Terrains\Wasteland%0.xml</Output>
-      <Time>2008-11-02T20:37:24.7749584-05:00</Time>
+      <Output>obj\x86\Debug\Textures\Map\Terrains\Wasteland_0.xml</Output>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Borders\GrassBorder.png</Source>
       <Importer>TextureImporter</Importer>
       <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\Textures\Map\Borders\GrassBorder%0.xml</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Output>obj\x86\Debug\Textures\Map\Borders\GrassBorder_0.xml</Output>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Terrains\Water.png</Source>
       <Importer>TextureImporter</Importer>
       <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\Textures\Map\Terrains\Water%0.xml</Output>
-      <Time>2008-11-02T20:37:24.7749584-05:00</Time>
+      <Output>obj\x86\Debug\Textures\Map\Terrains\Water_0.xml</Output>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <Item>
       <Source>Textures\Map\Borders\WaterBorder.png</Source>
       <Importer>TextureImporter</Importer>
       <Options>IntermediateFile</Options>
-      <Output>obj\x86\Debug\Textures\Map\Borders\WaterBorder%0.xml</Output>
-      <Time>2008-11-02T20:37:24.7593334-05:00</Time>
+      <Output>obj\x86\Debug\Textures\Map\Borders\WaterBorder_0.xml</Output>
+      <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
       <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
       <RootDirectory>C:\a-hundred-quests\OHQ\OHQ\Content\</RootDirectory>
       <LoggerRootDirectory>C:\a-hundred-quests\OHQ\OHQ\</LoggerRootDirectory>
       <IntermediateDirectory>C:\a-hundred-quests\OHQ\OHQ\Content\obj\x86\Debug\</IntermediateDirectory>
@@ -306,27 +307,31 @@
     <Assemblies>
       <Assembly>
         <Key>C:\a-hundred-quests\OHQ\OHQProcessors\bin\Debug\OHQProcessors.dll</Key>
-        <Value>2008-11-03T04:15:35.134125-05:00</Value>
+        <Value>2008-11-10T22:49:51.21875-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v2.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2007-11-28T12:08:00-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2008-10-10T18:42:32-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v2.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2007-11-28T12:08:42-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2008-10-10T18:43:28-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v2.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2007-11-28T12:08:30-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2008-10-10T18:43:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v2.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2007-11-28T12:07:44-05:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2008-10-10T18:48:18-04:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\WINDOWS\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\2.0.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2008-09-23T02:38:45.3125-04:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v3.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2008-10-10T18:48:50-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\WINDOWS\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\3.0.0.0__6d5c3888ef60e27d\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2008-11-10T12:27:09.640625-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

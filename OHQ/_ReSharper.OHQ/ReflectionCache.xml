@@ -14,4 +14,5 @@
   <Assembly Name="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="ba9e0740-8e15-4b3d-ad2e-062febfedec6" Timestamp="633300769580000000" XmlDocIndexTimestamp="633258349180000000" />
   <Assembly Name="Microsoft.Xna.Framework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" Image="cfee3a0c-203d-4c2b-928a-c197d7abb285" Timestamp="633592743020000000" XmlDocIndexTimestamp="633592771340000000" />
   <Assembly Name="Microsoft.Xna.Framework.Game, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" Image="338efa8b-b713-47bb-bf29-733713e941c1" Timestamp="633592755700000000" XmlDocIndexTimestamp="633592774020000000" />
+  <Assembly Name="Microsoft.Xna.Framework.Content.Pipeline, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" Image="0ff779e0-4657-437d-b04a-39f2b966bca1" Timestamp="633592753060000000" XmlDocIndexTimestamp="633592775940000000" />
 </Assemblies>
