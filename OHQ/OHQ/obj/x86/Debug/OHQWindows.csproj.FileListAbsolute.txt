@@ -32,3 +32,4 @@ C:\a-hundred-quests\OHQ\OHQ\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\a-hundred-quests\OHQ\OHQ\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\a-hundred-quests\OHQ\OHQ\obj\x86\Debug\OHQ.exe
 C:\a-hundred-quests\OHQ\OHQ\obj\x86\Debug\OHQ.pdb
+C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\forestbackground.xnb

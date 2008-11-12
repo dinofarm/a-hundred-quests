@@ -15,9 +15,10 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using OHQData;
+
 #endregion
 
-namespace OHQ
+namespace OHQ.GameScreens
 {
     /// <summary>
     /// This screen implements the actual game logic. It is just a
@@ -42,6 +43,8 @@ namespace OHQ
 
         Map map;
 
+        private bool loadingBattleScreen = false;
+
         #endregion
 
         #region Initialization
@@ -55,10 +58,10 @@ namespace OHQ
             TransitionOnTime = TimeSpan.FromSeconds(1.5);
             TransitionOffTime = TimeSpan.FromSeconds(0.5);
 
-            // temp texture
-            float rotation = 0;
-            float scale = 1.0f;
-            float depth = 0.5f;
+            // Map character sprite
+            const float rotation = 0;
+            const float scale = 1.0f;
+            const float depth = 0.5f;
             sprite = new AnimatedTexture(Vector2.Zero, rotation, scale, depth);
 
             gameState = GameState.Waiting;
@@ -72,24 +75,27 @@ namespace OHQ
         /// </summary>
         public override void LoadContent()
         {
+            //content manager
             if (content == null)
                 content = new ContentManager(ScreenManager.Game.Services, "Content");
 
+            //font
             gameFont = content.Load<SpriteFont>("gamefont");
 
+            //character
             character = content.Load<Texture2D>(@"Textures\Characters\HumanAvatarMale1");
 
             // character sprite
             sprite.Load(content, @"Textures\Characters\HumanAvatarMale1", 8, 2);
 
-            // map
+            //map
             map.LoadContent(content);
 
 
             // A real game would probably have more content than this sample, so
             // it would take longer to load. We simulate that by delaying for a
             // while, giving you a chance to admire the beautiful loading screen.
-            Thread.Sleep(1000);
+            //Thread.Sleep(1000);
 
             // once the load has finished, we use ResetElapsedTime to tell the game's
             // timing mechanism that we have just finished a very long frame, and that
@@ -118,7 +124,7 @@ namespace OHQ
         /// or if you tab away to a different application.
         /// </summary>
         public override void Update(GameTime gameTime, bool otherScreenHasFocus,
-                                                       bool coveredByOtherScreen)
+                                    bool coveredByOtherScreen)
         {
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
 
@@ -138,6 +144,8 @@ namespace OHQ
         {
             if (input == null)
                 throw new ArgumentNullException("input");
+
+            
 
             if (input.PauseGame)
             {
@@ -163,10 +171,14 @@ namespace OHQ
                     if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.Down))
                         movement.Y++;
 
-                    //Vector2 thumbstick = input.CurrentGamePadStates[i].ThumbSticks.Left;
-
-                    //movement.X += thumbstick.X;
-                   // movement.Y -= thumbstick.Y;
+                    //battle screen
+                    if (input.CurrentKeyboardStates[i].IsKeyDown(Keys.B) &&
+                        loadingBattleScreen == false)
+                    {
+                        ScreenManager.AddScreen(new BattleScreen());
+                        loadingBattleScreen = true;
+                    }
+                        
                 }
 
                 if (movement.Length() > 1)
@@ -183,27 +195,25 @@ namespace OHQ
 
 
         /// <summary>
-        /// Draws the gameplay screen.
+        /// Draws the map screen.
         /// </summary>
         public override void Draw(GameTime gameTime)
         {
-            // This game has a blue background. Why? Because!
+            //clear screen to black
             ScreenManager.GraphicsDevice.Clear(ClearOptions.Target,
                                                Color.Black, 0, 0);
 
+            //render sprites
             SpriteBatch spriteBatch = ScreenManager.SpriteBatch;
-
             spriteBatch.Begin();
-
             // draw the map
             map.draw(spriteBatch, (int)playerPosition.X, (int)playerPosition.Y);
 
             Vector2 centerPlayer = new Vector2(16 * Tile.SizePx, 10 * Tile.SizePx);
             sprite.DrawFrame(spriteBatch, centerPlayer);
-
             spriteBatch.End();
 
-            // If the game is transitioning on or off, fade it out to black.
+            //fade to black if transitioning
             if (TransitionPosition > 0)
                 ScreenManager.FadeBackBufferToBlack(255 - TransitionAlpha);
         }

@@ -9,6 +9,8 @@
 
 #region Using Statements
 using System;
+using OHQ.GameScreens;
+
 #endregion
 
 namespace OHQ
@@ -25,7 +27,7 @@ namespace OHQ
         /// Constructor fills in the menu contents.
         /// </summary>
         public MainMenuScreen()
-            : base("100 Quests")
+            : base("Ahundred Quests")
         {
             // Create our menu entries.
             MenuEntry playGameMenuEntry = new MenuEntry("Play Game");

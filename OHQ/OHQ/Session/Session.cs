@@ -20,6 +20,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
+using OHQ.GameScreens;
 using OHQData;
 #endregion
 
@@ -59,7 +60,7 @@ namespace OHQ
         /// <summary>
         /// The GameplayScreen object that created this session.
         /// </summary>
-        private GameplayScreen gameplayScreen;
+        private MapScreen mapScreen;
 
         #endregion
 
@@ -88,21 +89,21 @@ namespace OHQ
         /// <remarks>
         /// The lack of public constructors forces the singleton model.
         /// </remarks>
-        private Session(ScreenManager screenManager, GameplayScreen gameplayScreen)
+        private Session(ScreenManager screenManager, MapScreen mapScreen)
         {
             // check the parameter
             if (screenManager == null)
             {
                 throw new ArgumentNullException("screenManager");
             }
-            if (gameplayScreen == null)
+            if (mapScreen == null)
             {
-                throw new ArgumentNullException("gameplayScreen");
+                throw new ArgumentNullException("mapScreen");
             }
 
             // assign the parameter
             this.screenManager = screenManager;
-            this.gameplayScreen = gameplayScreen;
+            this.mapScreen = mapScreen;
         }
 
 
@@ -165,22 +166,22 @@ namespace OHQ
         /// <summary>
         /// Start a new session based on the data provided.
         /// </summary>
-        public static void StartNewSession(ScreenManager screenManager, GameplayScreen gameplayScreen)
+        public static void StartNewSession(ScreenManager screenManager, MapScreen mapScreen)
         {
             if (screenManager == null)
             {
                 throw new ArgumentNullException("screenManager");
             }
-            if (gameplayScreen == null)
+            if (mapScreen == null)
             {
-                throw new ArgumentNullException("gameplayScreen");
+                throw new ArgumentNullException("mapScreen");
             }
 
             // end any existing session
             EndSession();
 
             // create a new singleton
-            singleton = new Session(screenManager, gameplayScreen);
+            singleton = new Session(screenManager, mapScreen);
         }
 
 
@@ -199,15 +200,15 @@ namespace OHQ
             // -- store the gameplay session, for re-entrance
             if (singleton != null)
             {
-                GameplayScreen gameplayScreen = singleton.gameplayScreen;
-                singleton.gameplayScreen = null;
+                MapScreen mapScreen = singleton.mapScreen;
+                singleton.mapScreen = null;
 
                 // clear the singleton
                 singleton = null;
 
-                if (gameplayScreen != null)
+                if (mapScreen != null)
                 {
-                    gameplayScreen.ExitScreen();
+                    mapScreen.ExitScreen();
                 }
             }
         }

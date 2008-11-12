@@ -82,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedTexture.cs" />
-    <Compile Include="GameScreens\GameplayScreen.cs" />
+    <Compile Include="GameScreens\BattleScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OHQGame.cs" />
     <Compile Include="ScreenManager\GameScreen.cs" />

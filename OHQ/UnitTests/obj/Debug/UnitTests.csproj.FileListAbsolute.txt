@@ -33,3 +33,4 @@ C:\a-hundred-quests\OHQ\UnitTests\bin\Debug\nunit.framework.xml
 C:\a-hundred-quests\OHQ\UnitTests\obj\Debug\ResolveAssemblyReference.cache
 C:\a-hundred-quests\OHQ\UnitTests\obj\Debug\UnitTests.dll
 C:\a-hundred-quests\OHQ\UnitTests\obj\Debug\UnitTests.pdb
+C:\a-hundred-quests\OHQ\UnitTests\bin\Debug\Content\forestbackground.xnb

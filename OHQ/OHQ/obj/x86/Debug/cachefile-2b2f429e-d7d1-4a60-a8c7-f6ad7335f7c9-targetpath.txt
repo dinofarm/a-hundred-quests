@@ -22,3 +22,4 @@ Content\Map\Terrains\Hill.xnb
 Content\Map\Terrains\Mountain.xnb
 Content\Map\Terrains\Wasteland.xnb
 Content\Textures\Map\Terrains\SpriteSheet.xnb
+Content\forestbackground.xnb

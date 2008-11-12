@@ -51,7 +51,7 @@ namespace OHQ
             protected set { isPopup = value; }
         }
 
-        bool isPopup = false;
+        private bool isPopup;
 
 
         /// <summary>

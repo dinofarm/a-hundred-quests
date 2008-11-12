@@ -294,6 +294,15 @@
       <Output>obj\x86\Debug\Textures\Map\Borders\WaterBorder_0.xml</Output>
       <Time>2008-11-10T21:06:22.484375-05:00</Time>
     </Item>
+    <Item>
+      <Source>forestbackground.png</Source>
+      <Name>forestbackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\a-hundred-quests\OHQ\OHQ\bin\x86\Debug\Content\forestbackground.xnb</Output>
+      <Time>2008-11-11T02:32:24.171875-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
