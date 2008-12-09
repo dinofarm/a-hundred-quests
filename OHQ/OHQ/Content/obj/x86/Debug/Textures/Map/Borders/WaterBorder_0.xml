@@ -2,7 +2,7 @@
 <XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
   <Asset Type="Graphics:Texture2DContent">
     <Identity>
-      <SourceFilename>C:\a-hundred-quests\OHQ\OHQ\Content\Textures\Map\Borders\WaterBorder.png</SourceFilename>
+      <SourceFilename>C:\Users\Josh Jackson\a-hundred-quests\OHQ\OHQ\Content\Textures\Map\Borders\WaterBorder.png</SourceFilename>
       <SourceTool>TextureImporter</SourceTool>
     </Identity>
     <Mipmaps>

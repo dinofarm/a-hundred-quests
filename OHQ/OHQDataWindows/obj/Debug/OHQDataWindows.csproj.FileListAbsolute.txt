@@ -5,3 +5,9 @@ C:\a-hundred-quests\OHQ\OHQDataWindows\bin\Debug\nunit.framework.xml
 C:\a-hundred-quests\OHQ\OHQDataWindows\obj\Debug\ResolveAssemblyReference.cache
 C:\a-hundred-quests\OHQ\OHQDataWindows\obj\Debug\OHQDataWindows.dll
 C:\a-hundred-quests\OHQ\OHQDataWindows\obj\Debug\OHQDataWindows.pdb
+C:\Users\Josh Jackson\a-hundred-quests\OHQ\OHQDataWindows\bin\Debug\OHQDataWindows.dll
+C:\Users\Josh Jackson\a-hundred-quests\OHQ\OHQDataWindows\bin\Debug\OHQDataWindows.pdb
+C:\Users\Josh Jackson\a-hundred-quests\OHQ\OHQDataWindows\bin\Debug\nunit.framework.xml
+C:\Users\Josh Jackson\a-hundred-quests\OHQ\OHQDataWindows\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Josh Jackson\a-hundred-quests\OHQ\OHQDataWindows\obj\Debug\OHQDataWindows.dll
+C:\Users\Josh Jackson\a-hundred-quests\OHQ\OHQDataWindows\obj\Debug\OHQDataWindows.pdb
