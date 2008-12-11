@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OHQ.GameGUI
+namespace OHQ.GameGUI.Input
 {
     public delegate void OnFocusEventHandler(object sender);
     public delegate void OnLostFocusEventHandler(object sender);
