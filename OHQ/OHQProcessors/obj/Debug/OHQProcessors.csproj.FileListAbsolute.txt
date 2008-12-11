@@ -7,3 +7,12 @@ C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\OHQProcessors.Properties.Resourc
 C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\OHQProcessors.csproj.GenerateResource.Cache
 C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\OHQProcessors.dll
 C:\a-hundred-quests\OHQ\OHQProcessors\obj\Debug\OHQProcessors.pdb
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\bin\Debug\OHQProcessors.dll
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\bin\Debug\OHQProcessors.pdb
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\bin\Debug\OHQDataWindows.dll
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\bin\Debug\OHQDataWindows.pdb
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\obj\Debug\OHQProcessors.Properties.Resources.resources
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\obj\Debug\OHQProcessors.csproj.GenerateResource.Cache
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\obj\Debug\OHQProcessors.dll
+C:\Users\jordan\Desktop\OHQ\OHQ\OHQProcessors\obj\Debug\OHQProcessors.pdb
