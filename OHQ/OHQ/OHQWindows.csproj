@@ -82,8 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedTexture.cs" />
-    <Compile Include="GameGUI\PolyBase.cs" />
-    <Compile Include="GameGUI\PolyRender.cs" />
+    <Compile Include="GameGUI\Input\IFocusable.cs" />
     <Compile Include="GameScreens\GameplayScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OHQGame.cs" />

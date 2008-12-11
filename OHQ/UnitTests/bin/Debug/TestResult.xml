@@ -1,62 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\a-hundred-quests\OHQ\UnitTests\bin\Debug\UnitTests.dll" total="16" failures="1" not-run="0" date="2008-11-03" time="04:18:09">
-  <environment nunit-version="2.4.7.0" clr-version="2.0.50727.832" os-version="Microsoft Windows NT 5.1.2600 Service Pack 3" platform="Win32NT" cwd="C:\a-hundred-quests\OHQ\UnitTests\bin\Debug" machine-name="KEITHCOMPUTAR" user="Administrator" user-domain="KEITHCOMPUTAR" />
+<test-results name="C:\Users\Josh Jackson\a-hundred-quests\OHQ\UnitTests\bin\Debug\UnitTests.dll" total="2" failures="1" not-run="0" date="2008-12-10" time="17:16:30">
+  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.3053" os-version="Microsoft Windows NT 6.0.6001 Service Pack 1" platform="Win32NT" cwd="C:\Program Files\NUnit 2.4.8\bin" machine-name="WIN-X3NL0L79PVU" user="Josh Jackson" user-domain="WIN-X3NL0L79PVU" />
   <culture-info current-culture="en-US" current-uiculture="en-US" />
-  <test-suite name="C:\a-hundred-quests\OHQ\UnitTests\bin\Debug\UnitTests.dll" success="False" time="0.203" asserts="0">
+  <test-suite name="C:\Users\Josh Jackson\a-hundred-quests\OHQ\UnitTests\bin\Debug\UnitTests.dll" success="False" time="0.101" asserts="0">
     <results>
-      <test-suite name="UnitTests" success="False" time="0.203" asserts="0">
+      <test-suite name="UnitTests" success="False" time="0.097" asserts="0">
         <results>
-          <test-suite name="Actors" success="True" time="0.172" asserts="0">
+          <test-suite name="TerrainTest" success="False" time="0.077" asserts="0">
             <results>
-              <test-suite name="ActorTest" success="True" time="0.172" asserts="0">
-                <results>
-                  <test-case name="UnitTests.Actors.ActorTest.AddExperience" executed="True" success="True" time="0.125" asserts="1" />
-                  <test-case name="UnitTests.Actors.ActorTest.Construction" executed="True" success="True" time="0.016" asserts="10" />
-                  <test-case name="UnitTests.Actors.ActorTest.Equipment" executed="True" success="True" time="0.000" asserts="4" />
-                  <test-case name="UnitTests.Actors.ActorTest.Level" executed="True" success="True" time="0.000" asserts="0" />
-                  <test-case name="UnitTests.Actors.ActorTest.SecondaryStats" executed="True" success="True" time="0.000" asserts="8" />
-                  <test-case name="UnitTests.Actors.ActorTest.Stats" executed="True" success="True" time="0.000" asserts="5" />
-                </results>
-              </test-suite>
-            </results>
-          </test-suite>
-          <test-suite name="AnimationTest" success="True" time="0.000" asserts="0">
-            <results>
-              <test-case name="UnitTests.AnimationTest.Construction" executed="True" success="True" time="0.000" asserts="7" />
-              <test-case name="UnitTests.AnimationTest.Pause" executed="True" success="True" time="0.000" asserts="4" />
-              <test-case name="UnitTests.AnimationTest.Play" executed="True" success="True" time="0.000" asserts="1" />
-              <test-case name="UnitTests.AnimationTest.Stop" executed="True" success="True" time="0.000" asserts="1" />
-            </results>
-          </test-suite>
-          <test-suite name="Skills" success="True" time="0.000" asserts="0">
-            <results>
-              <test-suite name="ActiveSkillTest" success="True" time="0.000" asserts="0">
-                <results>
-                  <test-case name="UnitTests.Skills.ActiveSkillTest.Constructor" executed="True" success="True" time="0.000" asserts="1" />
-                </results>
-              </test-suite>
-              <test-suite name="SkillsTest" success="True" time="0.000" asserts="0">
-                <results>
-                  <test-case name="UnitTests.Skills.SkillsTest.Constructor" executed="True" success="True" time="0.000" asserts="2" />
-                  <test-case name="UnitTests.Skills.SkillsTest.Requirements" executed="True" success="True" time="0.000" asserts="3" />
-                </results>
-              </test-suite>
-            </results>
-          </test-suite>
-          <test-suite name="SpriteTest" success="True" time="0.000" asserts="0">
-            <results>
-              <test-case name="UnitTests.SpriteTest.Construction" executed="True" success="True" time="0.000" asserts="0" />
-            </results>
-          </test-suite>
-          <test-suite name="TerrainTest" success="False" time="0.000" asserts="0">
-            <results>
-              <test-case name="UnitTests.TerrainTest.Count" executed="True" success="True" time="0.000" asserts="1" />
-              <test-case name="UnitTests.TerrainTest.Name" executed="True" success="False" time="0.000" asserts="0">
+              <test-case name="UnitTests.TerrainTest.Count" executed="True" success="True" time="0.021" asserts="1" />
+              <test-case name="UnitTests.TerrainTest.Name" executed="True" success="False" time="0.049" asserts="0">
                 <failure>
                   <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
-                  <stack-trace><![CDATA[at OHQData.Terrain.get_Name() in C:\a-hundred-quests\OHQ\OHQDataWindows\Map\Terrain.cs:line 19
-at UnitTests.TerrainTest.Name() in C:\a-hundred-quests\OHQ\UnitTests\Map\TerrainTest.cs:line 30
+                  <stack-trace><![CDATA[at OHQData.Terrain.get_Name() in C:\Users\Josh Jackson\a-hundred-quests\OHQ\OHQDataWindows\Map\Terrain.cs:line 19
+at UnitTests.TerrainTest.Name() in C:\Users\Josh Jackson\a-hundred-quests\OHQ\UnitTests\Map\TerrainTest.cs:line 30
 ]]></stack-trace>
                 </failure>
               </test-case>
