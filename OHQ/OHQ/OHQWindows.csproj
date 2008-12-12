@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="AnimatedTexture.cs" />
     <Compile Include="GameGUI\Input\EventArgs.cs" />
+    <Compile Include="GameGUI\Input\EventBasedInput.cs" />
     <Compile Include="GameGUI\Input\IFocusable.cs" />
     <Compile Include="GameScreens\GameplayScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
