@@ -30,15 +30,15 @@ namespace OHQ.GameGUI.Input
     public class CancelEventArgs : System.EventArgs
     {
         #region Properties
-        bool Canceled { get; set; }
+        public bool Canceled { get; set; }
         #endregion
     }
     public class GamepadEventArgs : System.EventArgs
     {
         #region Properties
-        GamePadState GpState { get; set; }
-        GamepadButton GpButton { get; set; }
-        GamePadDPad GpDPad { get; set; }
+        public GamePadState State { get; set; }
+        public GamepadButton Button { get; set; }
+        public GamePadDPad DPad { get; set; }
         
         private PlayerIndex m_PlayerIndex = PlayerIndex.One;
         public PlayerIndex PlayerIndex

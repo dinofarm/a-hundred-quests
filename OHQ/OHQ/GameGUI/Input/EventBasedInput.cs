@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
@@ -94,7 +93,7 @@ namespace OHQ.GameGUI.Input
 
     public interface IEventBasedInputService
     {
-        #region Properties
+        #region Interface Properties
         float RepeatInterval { get; set; }
         Player AllowedPlayers { get; set; }
         IFocusable Focusable { get; set; }
@@ -117,6 +116,21 @@ namespace OHQ.GameGUI.Input
         event MenuSelectHandler OnMenuSelectReleased;
         event MenuBackHandler OnMenuBackPressed;
         event MenuBackHandler OnMenuBackReleased;
+        event NextTabHandler NextTab;
+        event PrevTabHandler PrevTab;
+        #endregion
+
+        #region Interface Methods
+        void Select();
+        void Back();
+        void TabToNext(CancelEventArgs args);
+        void TabToPrev(CancelEventArgs args);
+        void SimulateKey(KeyboardEventArgs args, bool down);
+        void SimulateButton(GamepadEventArgs args, bool down);
+        void SimulateMouse(MouseEventArgs args, bool down);
+        void ConnectPlayer(PlayerIndex index);
+        void DisconnectPlayer(PlayerIndex index);
+        void RequestFocus(MouseEventArgs args);
         #endregion
     }
 
@@ -124,11 +138,45 @@ namespace OHQ.GameGUI.Input
         : GameComponent, IEventBasedInputService where T : ControllerBase, new()
     {
         #region Properties
-        private ControllerBase m_Controller = null;
-        private float m_RepeatInterval = 250.0f;
+        public float RepeatInterval
+        {
+            get { return m_RepeatInterval;} set { m_RepeatInterval = value;}
+        }
+        public Player AllowedPlayers
+        {
+            get { return m_AllowedPlayers;} set { m_AllowedPlayers = value;}
+        }
+        public IFocusable Focusable
+        {
+            get { return m_Focus;}
+            set
+            {
+                if(value.Focus() && m_Focus != null)
+                    m_Focus.UnFocus();
+                m_Focus = value;
+            }
+        }
+        public List<Keys> TabKeys
+        {
+            get { return m_TabKeys; }
+            set { m_TabKeys = value; }
+        }
+        public List<GamepadButton> TabNext
+        {
+            get{ return m_TabNext;} set { m_TabNext = value;}
+        }
+        public List<GamepadButton> TabPrev
+        {
+            get { return m_TabPrev;} set { m_TabPrev = value;}
+        }
+        #endregion
+
+        #region Data Fields
         private bool m_TabEnabled = true;
+        private float m_RepeatInterval = 250.0f;
         private Player m_AllowedPlayers = Player.One;
         private IFocusable m_Focus = null;
+        private ControllerBase m_Controller = null;
         private List<Keys> m_TabKeys = new List<Keys>();
         private List<GamepadButton> m_TabNext = new List<GamepadButton>();
         private List<GamepadButton> m_TabPrev = new List<GamepadButton>();
@@ -137,7 +185,6 @@ namespace OHQ.GameGUI.Input
         #endregion
 
         #region Events
-
         public event PlayerConnectHandler OnPlayerConnect;
         public event PlayerDisconnectHandler OnPlayerDisconnect;
         public event MouseButtonClickHandler OnRequestingFocus;
@@ -151,8 +198,10 @@ namespace OHQ.GameGUI.Input
         public event MenuSelectHandler OnMenuSelectReleased;
         public event MenuBackHandler OnMenuBackPressed;
         public event MenuBackHandler OnMenuBackReleased;
+        public event NextTabHandler NextTab;
+        public event PrevTabHandler PrevTab;
         #endregion
-
+        
         public EventBasedInput(Game game)
             : base(game)
         {
@@ -166,6 +215,112 @@ namespace OHQ.GameGUI.Input
             m_TabPrev.Add(GamepadButton.LeftStickLeft);
             m_SelectNext.Add(GamepadButton.A);
             m_SelectPrev.Add(GamepadButton.B);
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            // Only update the controller if we have one
+            if (m_Controller != null)
+                m_Controller.Update(gameTime);
+
+            base.Update(gameTime);
+        }
+
+        public void Select()
+        {
+            if(OnMenuSelectPressed != null)
+                OnMenuSelectPressed.Invoke(m_Focus);
+        }
+
+        public void Back()
+        {
+            if(OnMenuBackPressed != null)
+                OnMenuBackPressed.Invoke(m_Focus);
+        }
+
+        public void TabToNext(CancelEventArgs cancelEventArgs)
+        {
+            if (NextTab != null)
+                NextTab.Invoke(cancelEventArgs);
+        }
+
+        public void TabToPrev(CancelEventArgs cancelEventArgs)
+        {
+            if (PrevTab != null)
+                PrevTab.Invoke(cancelEventArgs);
+        }
+
+        public void ConnectPlayer(PlayerIndex playerIndex)
+        {
+            if(OnPlayerConnect != null)
+                OnPlayerConnect.Invoke(playerIndex);
+        }
+
+        public void DisconnectPlayer(PlayerIndex playerIndex)
+        {
+            if(OnPlayerDisconnect != null)
+                OnPlayerDisconnect.Invoke(playerIndex);
+        }
+
+        public void RequestFocus(MouseEventArgs mouseEventArgs)
+        {
+           if(OnRequestingFocus != null)
+               OnRequestingFocus.Invoke(mouseEventArgs);
+        }
+
+        public void SimulateKey(KeyboardEventArgs keyboardEventArgs, bool down)
+        {
+            if(down && OnKeyboardKeyPress != null)
+                OnKeyboardKeyPress.Invoke(m_Focus, keyboardEventArgs);
+            else if(!down && OnKeyboardKeyRelease != null)
+                OnKeyboardKeyRelease.Invoke(m_Focus, keyboardEventArgs);
+        }
+
+        public void SimulateMouse(MouseEventArgs mouseEventArgs, bool down)
+        {
+            if(down && OnMouseButtonClick != null)
+                OnMouseButtonClick.Invoke(mouseEventArgs);
+            else if(!down && OnMouseButtonRelease != null)
+                OnMouseButtonRelease.Invoke(mouseEventArgs);
+        }
+
+
+        public void SimulateButton(GamepadEventArgs gamepadEventArgs, bool down)
+        {
+            if(down)
+            {
+
+                if(OnGamepadButtonPress != null)
+                    OnGamepadButtonPress.Invoke(m_Focus, gamepadEventArgs);
+                if(m_SelectNext.Contains(gamepadEventArgs.Button))
+                {
+                    if (OnMenuSelectPressed != null)
+                        OnMenuSelectPressed.Invoke(m_Focus);
+
+                }
+                else if(m_SelectPrev.Contains(gamepadEventArgs.Button))
+                {
+                    if(OnMenuBackPressed != null)
+                        OnMenuBackPressed.Invoke(m_Focus);
+                }
+            }
+            if (!down)
+            {
+
+                if (OnGamepadButtonRelease != null)
+                    OnGamepadButtonRelease.Invoke(m_Focus, gamepadEventArgs);
+                if (m_SelectNext.Contains(gamepadEventArgs.Button))
+                {
+                    if (OnMenuSelectReleased != null)
+                        OnMenuSelectReleased.Invoke(m_Focus);
+
+                }
+                else if (m_SelectPrev.Contains(gamepadEventArgs.Button))
+                {
+                    if (OnMenuBackReleased != null)
+                        OnMenuBackReleased.Invoke(m_Focus);
+                }
+            }
         }
     }
 }
