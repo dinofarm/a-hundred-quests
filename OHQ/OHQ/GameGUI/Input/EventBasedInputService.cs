@@ -75,6 +75,11 @@ namespace OHQ.GameGUI.Input
 
     #endregion
 
+    /// <summary>
+    /// All controller classes should from this class in order to be compliant with the 
+    /// event based input system. All virual functions should be overriden in derived classes
+    /// especially Update().
+    /// </summary>
     public class ControllerBase
     {
         private IEventBasedInputService m_EbiService;
@@ -91,9 +96,11 @@ namespace OHQ.GameGUI.Input
         protected virtual void OnEbiServiceSet(){}
     }
 
+
     public interface IEventBasedInputService
     {
         #region Interface Properties
+        bool TabEnabled { get; set; }
         float RepeatInterval { get; set; }
         Player AllowedPlayers { get; set; }
         IFocusable Focusable { get; set; }
@@ -169,6 +176,11 @@ namespace OHQ.GameGUI.Input
         {
             get { return m_TabPrev;} set { m_TabPrev = value;}
         }
+        public bool TabEnabled
+        {
+            get { return m_TabEnabled; }
+            set { m_TabEnabled = value;}
+        }
         #endregion
 
         #region Data Fields
@@ -201,7 +213,8 @@ namespace OHQ.GameGUI.Input
         public event NextTabHandler NextTab;
         public event PrevTabHandler PrevTab;
         #endregion
-        
+
+        #region Ctor
         public EventBasedInput(Game game)
             : base(game)
         {
@@ -216,7 +229,9 @@ namespace OHQ.GameGUI.Input
             m_SelectNext.Add(GamepadButton.A);
             m_SelectPrev.Add(GamepadButton.B);
         }
+        #endregion
 
+        #region Methods
         public override void Update(GameTime gameTime)
         {
             // Only update the controller if we have one
@@ -321,6 +336,117 @@ namespace OHQ.GameGUI.Input
                         OnMenuBackReleased.Invoke(m_Focus);
                 }
             }
+        }
+        #endregion
+    }
+
+    /// <summary>
+    /// This class is the representation of a player using the mouse and keyboard
+    /// </summary>
+    public class MouseKBController : ControllerBase
+    {
+        protected class InputState
+        {
+            public bool Pressed;
+            public float TimePressed;
+        }
+        
+        protected Dictionary<Keys, InputState> m_keys = new Dictionary<Keys, InputState>();
+        protected MouseState m_CurrentMouseState;
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            if(EbiService == null)
+                return;
+
+            UpdateKeyboard(gameTime);
+            UpdateMouse(gameTime);
+        }
+
+        protected virtual void UpdateKeyboard(GameTime gameTime)
+        {
+            KeyboardEventArgs keyboardEventArgs = new KeyboardEventArgs();
+            KeyboardState keyboardState = Keyboard.GetState();
+            Keys[] pressedKeys = keyboardState.GetPressedKeys();
+
+            // This loop cycles through all the new keys pressed by the user
+            foreach (Keys key in pressedKeys)
+            {
+                // If Alt is pressed
+                if (key == Keys.LeftAlt || key == Keys.RightAlt)
+                    keyboardEventArgs.Alt = true;
+                // If Control is pressed
+                else if (key == Keys.LeftControl || key == Keys.RightControl)
+                    keyboardEventArgs.Ctrl = true;
+                // If Shift is pressed
+                else if (key == Keys.LeftShift || key == Keys.RightShift)
+                    keyboardEventArgs.Shift = true;
+                else
+                {
+                    // If the key wasn't pressed before this update
+                    // it is added to our array of keys we're keeping track off
+                    if(!m_keys.ContainsKey(key))
+                        m_keys[key] = new InputState();
+                }
+            }
+
+            // This loop loops through all the keys already pressed by the user
+            // we take this in two steps because we dont want to prematurely
+            // make a user commit to an action
+            foreach(Keys key in m_keys.Keys)
+            {
+                // If the key is Shift, Control, or Alt skip to the next key
+                if (key == Keys.LeftControl || key == Keys.RightControl ||
+                    key == Keys.LeftShift || key == Keys.RightShift || 
+                    key == Keys.LeftAlt || key == Keys.RightAlt)
+                    continue;
+
+                // Is key pressed?
+                bool keyPressed = keyboardState.IsKeyDown(key);
+                
+                // Get the keys InputState
+                InputState _state = m_keys[key];
+
+                // If the keys was pressed on the previous update add to the total time
+                // the key has been pressed
+                if (keyPressed)
+                    _state.TimePressed += gameTime.ElapsedGameTime.Milliseconds;
+
+                // If the key is pressed now and was not pressed before
+                if(keyPressed && !_state.Pressed)
+                {
+                    // Set the key state to pressed
+                    _state.Pressed = true;
+                    
+                    // Set the event args key
+                    keyboardEventArgs.Key = key;
+
+                    // Fire event
+                    EbiService.SimulateKey(keyboardEventArgs, true);
+
+                    // Tab keys enabled
+                    if(EbiService.TabEnabled)
+                    {
+                        for(int i = 0; i < EbiService.TabKeys.Count; i++)
+                        {
+                            if(key == EbiService.TabKeys[i])
+                            {
+                                if(keyboardEventArgs.Shift)
+                                    EbiService.TabToNext(new CancelEventArgs());
+                                else
+                                    EbiService.TabToPrev(new CancelEventArgs());
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        protected virtual void UpdateMouse(GameTime gameTime)
+        {
+            
         }
     }
 }
