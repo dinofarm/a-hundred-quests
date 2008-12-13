@@ -24,6 +24,9 @@
       <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Hero.cs" caret="166" scrollPosition="0|0" />
       <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Actor.cs" caret="7215" scrollPosition="0|0" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameScreens/f:MapScreen.cs" caret="0" scrollPosition="0|0" />
+      <File id="d:Miscellaneous Files/f:MouseManager.cs" caret="8625" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="913" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="936" scrollPosition="0|0" />
     </RecentFiles>
     <RecentEdits>
       <File id="0EF14C5B-E170-41BA-B6F4-4F22E5C740B2/d:Actors/f:ActorTest.cs" caret="13" scrollPosition="0|94" />
@@ -31,6 +34,21 @@
       <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Hero.cs" caret="1330" scrollPosition="0|0" />
       <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Troop.cs" caret="98" scrollPosition="0|0" />
       <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Avatar.cs" caret="45" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1883" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1883" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="101" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="101" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="1009" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1871" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="617" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="207" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1664" scrollPosition="0|33" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1107" scrollPosition="0|11" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1328" scrollPosition="0|17" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1069" scrollPosition="0|18" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="839" scrollPosition="0|16" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="194" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="851" scrollPosition="0|0" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -43,21 +61,21 @@
   </UnitTestRunner>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="Microsoft" priority="2" />
+      <Item value="Microsoft" priority="5" />
       <Item value="Xna.Framework" priority="1" />
       <Item value="Graphics" priority="1" />
       <Item value="float" priority="9" />
       <Item value="PolyBase" priority="2" />
       <Item value="protected" priority="0" />
       <Item value="virtual" priority="0" />
-      <Item value="void" priority="0" />
+      <Item value="void" priority="8" />
       <Item value="Vector2" priority="1" />
       <Item value="m_color" priority="0" />
       <Item value="m_width" priority="1" />
       <Item value="m_center" priority="1" />
       <Item value="m_y" priority="1" />
       <Item value="m_height" priority="1" />
-      <Item value="public" priority="2" />
+      <Item value="public" priority="22" />
       <Item value="m_x" priority="0" />
       <Item value="height" priority="1" />
       <Item value="width" priority="0" />
@@ -65,12 +83,41 @@
       <Item value="this" priority="0" />
       <Item value="m_z" priority="0" />
       <Item value="partial" priority="0" />
-      <Item value="class" priority="0" />
+      <Item value="class" priority="4" />
       <Item value="IDrawable" priority="0" />
       <Item value="IUpdateable" priority="0" />
-      <Item value="using" priority="1" />
-      <Item value="Xna" priority="0" />
-      <Item value="Framework" priority="0" />
+      <Item value="using" priority="3" />
+      <Item value="Xna" priority="1" />
+      <Item value="Framework" priority="1" />
+      <Item value="GameComponent" priority="0" />
+      <Item value="MouseManager" priority="0" />
+      <Item value="Game" priority="0" />
+      <Item value="base" priority="0" />
+      <Item value="override" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="UpdateMouse" priority="0" />
+      <Item value="System" priority="4" />
+      <Item value="EventHandler" priority="1" />
+      <Item value="Keys" priority="0" />
+      <Item value="bool" priority="3" />
+      <Item value="interface" priority="0" />
+      <Item value="Collections" priority="0" />
+      <Item value="Generic" priority="0" />
+      <Item value="delegate" priority="7" />
+      <Item value="object" priority="5" />
+      <Item value="MouseEventArgs" priority="1" />
+      <Item value="KeyboardEventArgs" priority="2" />
+      <Item value="enum" priority="1" />
+      <Item value="PlayerIndex" priority="4" />
+      <Item value="return" priority="0" />
+      <Item value="m_PlayerIndex" priority="1" />
+      <Item value="value" priority="0" />
+      <Item value="GamePadState" priority="0" />
+      <Item value="GamepadButton" priority="0" />
+      <Item value="GamePadDPad" priority="0" />
+      <Item value="EventArgs" priority="0" />
+      <Item value="GamepadEventArgs" priority="0" />
+      <Item value="CancelEventArgs" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Vector2">
       <Item value="Zero" priority="0" />
@@ -78,6 +125,10 @@
     <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Vector2">
       <Item value="X" priority="0" />
       <Item value="Y" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.PlayerIndex">
+      <Item value="Two" priority="0" />
+      <Item value="One" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
