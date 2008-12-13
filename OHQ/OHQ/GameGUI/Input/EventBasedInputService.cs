@@ -365,8 +365,10 @@ namespace OHQ.GameGUI.Input
             UpdateMouse(gameTime);
         }
 
+
         protected virtual void UpdateKeyboard(GameTime gameTime)
         {
+            #region Update Keyboard
             KeyboardEventArgs keyboardEventArgs = new KeyboardEventArgs();
             KeyboardState keyboardState = Keyboard.GetState();
             Keys[] pressedKeys = keyboardState.GetPressedKeys();
@@ -434,19 +436,216 @@ namespace OHQ.GameGUI.Input
                             if(key == EbiService.TabKeys[i])
                             {
                                 if(keyboardEventArgs.Shift)
-                                    EbiService.TabToNext(new CancelEventArgs());
-                                else
                                     EbiService.TabToPrev(new CancelEventArgs());
+                                else
+                                    EbiService.TabToNext(new CancelEventArgs());
                             }
                         }
                     }
                 }
+                // If the key was pressed and is no longer being held
+                else if (!keyPressed && _state.Pressed)
+                {
+                    // Key's no longer pressed
+                    _state.Pressed = false;
+                    _state.TimePressed = 0.0f;
+
+                    // Set the key to be sent
+                    keyboardEventArgs.Key = key;
+
+                    // Fire event
+                    EbiService.SimulateKey(keyboardEventArgs, false);
+                }
+                // If the key has been held longer then the key repeat interval
+                if(_state.TimePressed >= EbiService.RepeatInterval)
+                {
+                    _state.Pressed = false;
+                    _state.TimePressed = 0.0f;
+                }
             }
-            
+            #endregion
         }
         protected virtual void UpdateMouse(GameTime gameTime)
         {
-            
+            #region Update Mouse
+
+            MouseState curState = Mouse.GetState();
+
+            #region Left Mouse Click
+            // Check to see if the left mouse button has changed
+            if(curState.LeftButton != m_CurrentMouseState.LeftButton)
+            {
+                if(curState.LeftButton == ButtonState.Released)
+                {
+                    m_CurrentMouseState = curState;
+
+                    // Prepare event args
+                    MouseEventArgs args = new MouseEventArgs();
+                    args.MouseButton = MouseButton.Left;
+                    args.State = curState;
+                    args.Posistion = new Point(curState.X, curState.Y);
+
+                    // Fire event
+                    EbiService.SimulateMouse(args, false);
+                }
+                else
+                {
+                    // Make sure right mouse isn;t down
+                    if (m_CurrentMouseState.RightButton == ButtonState.Released)
+                    {
+                        m_CurrentMouseState = curState;
+
+                        // Prepare event args
+                        MouseEventArgs args = new MouseEventArgs();
+                        args.MouseButton = MouseButton.Left;
+                        args.State = curState;
+                        args.Posistion = new Point(curState.X, curState.Y);
+
+                        // Request focus and fire event
+                        EbiService.RequestFocus(args);
+                        EbiService.SimulateMouse(args, true);
+                    }
+                }
+            }
+            #endregion
+
+            #region Right Mouse Click
+            // Check to see if the right mouse button has changed
+            if (curState.RightButton != m_CurrentMouseState.RightButton)
+            {
+                if (curState.RightButton == ButtonState.Released)
+                {
+                    m_CurrentMouseState = curState;
+
+                    // Prepare event args
+                    MouseEventArgs args = new MouseEventArgs();
+                    args.MouseButton = MouseButton.Right;
+                    args.State = curState;
+                    args.Posistion = new Point(curState.X, curState.Y);
+
+                    // Fire event
+                    EbiService.SimulateMouse(args, false);
+                }
+                else
+                {
+                    // Only if the left button is released
+                    if (m_CurrentMouseState.LeftButton == ButtonState.Released)
+                    {
+                        m_CurrentMouseState = curState;
+
+                        // Prepare event args
+                        MouseEventArgs args = new MouseEventArgs();
+                        args.MouseButton = MouseButton.Right;
+                        args.State = curState;
+                        args.Posistion = new Point(curState.X, curState.Y);
+
+                        // Request focus and fire event
+                        EbiService.RequestFocus(args);
+                        EbiService.SimulateMouse(args, true);
+                    }
+                }
+            }
+            #endregion
+
+            #region Middle Mouse Click
+            // Check to see if the right mouse button has changed
+            if (curState.MiddleButton != m_CurrentMouseState.MiddleButton)
+            {
+                if (curState.MiddleButton == ButtonState.Released)
+                {
+                    m_CurrentMouseState = curState;
+
+                    // Prepare event args
+                    MouseEventArgs args = new MouseEventArgs();
+                    args.MouseButton = MouseButton.Middle;
+                    args.State = curState;
+                    args.Posistion = new Point(curState.X, curState.Y);
+
+                    // Fire event
+                    EbiService.SimulateMouse(args, false);
+                }
+                else
+                {
+                    m_CurrentMouseState = curState;
+
+                    // Prepare event args
+                    MouseEventArgs args = new MouseEventArgs();
+                    args.MouseButton = MouseButton.Middle;
+                    args.State = curState;
+                    args.Posistion = new Point(curState.X, curState.Y);
+
+                    // Request focus and fire event
+                    EbiService.SimulateMouse(args, true);
+                }
+            }
+            #endregion
+
+            #region Mouse Button 4 Click
+            // Check to see if the right mouse button has changed
+            if (curState.XButton1 != m_CurrentMouseState.XButton1)
+            {
+                if (curState.XButton1 == ButtonState.Released)
+                {
+                    m_CurrentMouseState = curState;
+
+                    // Prepare event args
+                    MouseEventArgs args = new MouseEventArgs();
+                    args.MouseButton = MouseButton.Button4;
+                    args.State = curState;
+                    args.Posistion = new Point(curState.X, curState.Y);
+
+                    // Fire event
+                    EbiService.SimulateMouse(args, false);
+                }
+                else
+                {
+                    m_CurrentMouseState = curState;
+
+                    // Prepare event args
+                    MouseEventArgs args = new MouseEventArgs();
+                    args.MouseButton = MouseButton.Button4;
+                    args.State = curState;
+                    args.Posistion = new Point(curState.X, curState.Y);
+
+                    // Request focus and fire event
+                    EbiService.SimulateMouse(args, true);
+                }
+            }
+            #endregion
+
+            #region Mouse Button 5 Click
+            // Check to see if the right mouse button has changed
+            if (curState.XButton2 != m_CurrentMouseState.XButton2)
+            {
+                if (curState.XButton2 == ButtonState.Released)
+                {
+                    m_CurrentMouseState = curState;
+
+                    // Prepare event args
+                    MouseEventArgs args = new MouseEventArgs();
+                    args.MouseButton = MouseButton.Button5;
+                    args.State = curState;
+                    args.Posistion = new Point(curState.X, curState.Y);
+
+                    // Fire event
+                    EbiService.SimulateMouse(args, false);
+                }
+                else
+                {
+                    m_CurrentMouseState = curState;
+
+                    // Prepare event args
+                    MouseEventArgs args = new MouseEventArgs();
+                    args.MouseButton = MouseButton.Button5;
+                    args.State = curState;
+                    args.Posistion = new Point(curState.X, curState.Y);
+
+                    // Request focus and fire event
+                    EbiService.SimulateMouse(args, true);
+                }
+            }
+            #endregion
+            #endregion
         }
     }
 }

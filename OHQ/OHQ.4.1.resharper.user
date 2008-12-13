@@ -25,39 +25,40 @@
       <File id="20E9EAE5-F91A-45E2-859D-512BDBEEFBD2/d:Actors/f:Actor.cs" caret="7215" scrollPosition="0|0" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameScreens/f:MapScreen.cs" caret="0" scrollPosition="0|0" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="962" scrollPosition="0|0" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="11076" scrollPosition="0|107" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:ScreenManager/f:InputState.cs" caret="1625" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="13734" scrollPosition="0|53" />
     </RecentFiles>
     <RecentEdits>
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="5682" scrollPosition="0|11" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="5745" scrollPosition="0|14" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="6139" scrollPosition="0|14" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="6621" scrollPosition="0|14" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="6654" scrollPosition="0|14" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="11014" scrollPosition="0|101" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1072" scrollPosition="0|38" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1021" scrollPosition="0|38" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="819" scrollPosition="0|9" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventArgs.cs" caret="1091" scrollPosition="0|18" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="12026" scrollPosition="0|126" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="6248" scrollPosition="0|44" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="9148" scrollPosition="0|99" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="9297" scrollPosition="0|99" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="9471" scrollPosition="0|99" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="9643" scrollPosition="0|105" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="9818" scrollPosition="0|105" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="10190" scrollPosition="0|135" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="0" scrollPosition="0|0" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="7256" scrollPosition="0|15" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="10003" scrollPosition="0|68" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="10885" scrollPosition="0|77" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="11370" scrollPosition="0|101" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="11596" scrollPosition="0|101" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="12006" scrollPosition="0|107" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="10491" scrollPosition="0|82" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="8371" scrollPosition="0|9" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="8239" scrollPosition="0|18" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="8781" scrollPosition="0|21" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInput.cs" caret="12336" scrollPosition="0|129" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="12203" scrollPosition="0|126" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="6287" scrollPosition="0|44" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="9325" scrollPosition="0|99" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="9474" scrollPosition="0|99" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="9648" scrollPosition="0|99" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="9820" scrollPosition="0|105" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="9995" scrollPosition="0|105" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="10367" scrollPosition="0|135" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="0" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="7433" scrollPosition="0|15" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="10180" scrollPosition="0|68" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="11062" scrollPosition="0|77" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="11547" scrollPosition="0|101" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="11773" scrollPosition="0|101" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="12183" scrollPosition="0|107" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="10668" scrollPosition="0|82" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="8548" scrollPosition="0|9" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="8416" scrollPosition="0|18" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="8958" scrollPosition="0|21" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="12513" scrollPosition="0|129" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="6981" scrollPosition="0|49" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="16936" scrollPosition="0|112" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="3515" scrollPosition="0|14" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="5788" scrollPosition="0|14" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="3570" scrollPosition="0|5" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="4037" scrollPosition="0|6" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="16327" scrollPosition="0|111" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="16936" scrollPosition="0|111" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -108,7 +109,7 @@
       <Item value="System" priority="4" />
       <Item value="EventHandler" priority="1" />
       <Item value="Keys" priority="1" />
-      <Item value="bool" priority="5" />
+      <Item value="bool" priority="6" />
       <Item value="interface" priority="0" />
       <Item value="Collections" priority="0" />
       <Item value="Generic" priority="0" />
@@ -118,15 +119,15 @@
       <Item value="KeyboardEventArgs" priority="5" />
       <Item value="enum" priority="1" />
       <Item value="PlayerIndex" priority="6" />
-      <Item value="return" priority="8" />
+      <Item value="return" priority="9" />
       <Item value="m_PlayerIndex" priority="1" />
-      <Item value="value" priority="7" />
+      <Item value="value" priority="8" />
       <Item value="GamePadState" priority="0" />
       <Item value="GamepadButton" priority="5" />
       <Item value="GamePadDPad" priority="0" />
       <Item value="EventArgs" priority="0" />
       <Item value="GamepadEventArgs" priority="1" />
-      <Item value="CancelEventArgs" priority="3" />
+      <Item value="CancelEventArgs" priority="5" />
       <Item value="event" priority="13" />
       <Item value="OnPlayerConnectEventHandler" priority="0" />
       <Item value="OnPlayerDisconnectEventHandler" priority="0" />
@@ -151,7 +152,7 @@
       <Item value="where" priority="0" />
       <Item value="true" priority="1" />
       <Item value="ControllerBase" priority="2" />
-      <Item value="new" priority="5" />
+      <Item value="new" priority="7" />
       <Item value="EventBasedInput" priority="0" />
       <Item value="game" priority="0" />
       <Item value="List&lt;Keys&gt;" priority="0" />
@@ -162,21 +163,27 @@
       <Item value="m_TabNext" priority="3" />
       <Item value="m_SelectNext" priority="1" />
       <Item value="m_SelectPrev" priority="1" />
-      <Item value="if" priority="20" />
+      <Item value="if" priority="24" />
       <Item value="gameTime" priority="1" />
       <Item value="m_Focus" priority="10" />
       <Item value="cancelEventArgs" priority="2" />
       <Item value="NextTabHandler" priority="1" />
       <Item value="PrevTabHandler" priority="1" />
       <Item value="playerIndex" priority="3" />
-      <Item value="keyboardEventArgs" priority="2" />
+      <Item value="keyboardEventArgs" priority="3" />
       <Item value="down" priority="3" />
-      <Item value="else" priority="1" />
+      <Item value="else" priority="2" />
       <Item value="m_AllowedPlayers" priority="1" />
       <Item value="m_RepeatInterval" priority="1" />
       <Item value="mouseEventArgs" priority="5" />
       <Item value="OnMouseButtonRelease" priority="0" />
       <Item value="gamepadEventArgs" priority="6" />
+      <Item value="m_TabEnabled" priority="1" />
+      <Item value="EbiService" priority="6" />
+      <Item value="for" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="i" priority="1" />
+      <Item value="key" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Vector2">
       <Item value="Zero" priority="0" />
@@ -196,6 +203,7 @@
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="Add" priority="4" />
       <Item value="Contains" priority="2" />
+      <Item value="Count" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@OHQ.GameGUI.Input.GamepadButton">
       <Item value="LeftStickRight" priority="0" />
@@ -258,6 +266,16 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:OHQ.GameGUI.Input.GamepadEventArgs">
       <Item value="Button" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OHQ.GameGUI.Input.IEventBasedInputService">
+      <Item value="SimulateKey" priority="0" />
+      <Item value="TabEnabled" priority="0" />
+      <Item value="TabToNext" priority="1" />
+      <Item value="TabKeys" priority="1" />
+      <Item value="TabToPrev" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:OHQ.GameGUI.Input.KeyboardEventArgs">
+      <Item value="Shift" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
