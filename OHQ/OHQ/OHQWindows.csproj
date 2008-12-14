@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedTexture.cs" />
+    <Compile Include="GameGUI\Graphics\QuadBase.cs" />
     <Compile Include="GameGUI\Input\EventArgs.cs" />
     <Compile Include="GameGUI\Input\EventBasedInputService.cs" />
     <Compile Include="GameGUI\Input\IFocusable.cs" />
