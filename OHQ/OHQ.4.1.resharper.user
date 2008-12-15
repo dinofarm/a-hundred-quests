@@ -30,11 +30,9 @@
       <File id="0EF14C5B-E170-41BA-B6F4-4F22E5C740B2/d:Sprites/f:AnimationTest.cs" caret="295" scrollPosition="0|0" />
       <File id="0EF14C5B-E170-41BA-B6F4-4F22E5C740B2/d:Sprites/f:SpriteTest.cs" caret="211" scrollPosition="0|0" />
       <File id="0EF14C5B-E170-41BA-B6F4-4F22E5C740B2/d:Map/f:TerrainTest.cs" caret="0" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:Sound/f:SoundManager.cs" caret="0" scrollPosition="0|0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="6981" scrollPosition="0|49" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="16975" scrollPosition="0|112" />
-      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="3515" scrollPosition="0|14" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="5788" scrollPosition="0|14" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="3570" scrollPosition="0|5" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="4037" scrollPosition="0|6" />
@@ -62,6 +60,9 @@
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="24205" scrollPosition="0|113" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="24703" scrollPosition="0|113" />
       <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:GameGUI/d:Input/f:EventBasedInputService.cs" caret="25017" scrollPosition="0|65" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:Sound/f:SoundManager.cs" caret="642" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:Sound/f:SoundManager.cs" caret="0" scrollPosition="0|0" />
+      <File id="7FA03C8F-CC74-4226-A25C-E76896A01111/d:Sound/f:SoundManager.cs" caret="629" scrollPosition="0|0" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -74,8 +75,8 @@
   </UnitTestRunner>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="Microsoft" priority="6" />
-      <Item value="Xna.Framework" priority="1" />
+      <Item value="Microsoft" priority="8" />
+      <Item value="Xna.Framework" priority="3" />
       <Item value="Graphics" priority="1" />
       <Item value="float" priority="10" />
       <Item value="PolyBase" priority="2" />
@@ -88,7 +89,7 @@
       <Item value="m_center" priority="1" />
       <Item value="m_y" priority="1" />
       <Item value="m_height" priority="1" />
-      <Item value="public" priority="40" />
+      <Item value="public" priority="43" />
       <Item value="m_x" priority="0" />
       <Item value="height" priority="1" />
       <Item value="width" priority="0" />
@@ -99,15 +100,15 @@
       <Item value="class" priority="5" />
       <Item value="IDrawable" priority="0" />
       <Item value="IUpdateable" priority="0" />
-      <Item value="using" priority="3" />
+      <Item value="using" priority="5" />
       <Item value="Xna" priority="2" />
       <Item value="Framework" priority="2" />
-      <Item value="GameComponent" priority="1" />
+      <Item value="GameComponent" priority="2" />
       <Item value="MouseManager" priority="0" />
       <Item value="Game" priority="2" />
       <Item value="base" priority="1" />
-      <Item value="override" priority="1" />
-      <Item value="private" priority="3" />
+      <Item value="override" priority="2" />
+      <Item value="private" priority="4" />
       <Item value="UpdateMouse" priority="0" />
       <Item value="System" priority="4" />
       <Item value="EventHandler" priority="1" />
@@ -148,7 +149,7 @@
       <Item value="GameTime" priority="0" />
       <Item value="OnEbiServiceSet" priority="0" />
       <Item value="IFocusable" priority="0" />
-      <Item value="List" priority="2" />
+      <Item value="List" priority="4" />
       <Item value="Player" priority="1" />
       <Item value="sealed" priority="0" />
       <Item value="IEventBasedInputService" priority="0" />
@@ -200,6 +201,12 @@
       <Item value="args" priority="5" />
       <Item value="MouseButton" priority="0" />
       <Item value="ButtonState" priority="1" />
+      <Item value="Audio" priority="0" />
+      <Item value="Media" priority="0" />
+      <Item value="Content" priority="0" />
+      <Item value="SoundBank" priority="1" />
+      <Item value="WaveBank" priority="0" />
+      <Item value="SoundManager" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Vector2">
       <Item value="Zero" priority="0" />

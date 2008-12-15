@@ -12,7 +12,7 @@
   <Assembly Name="Microsoft.Xna.Framework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" Image="cfee3a0c-203d-4c2b-928a-c197d7abb285" Timestamp="633592743020000000" XmlDocIndexTimestamp="633592771340000000" />
   <Assembly Name="Microsoft.Xna.Framework.Game, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" Image="338efa8b-b713-47bb-bf29-733713e941c1" Timestamp="633592755700000000" XmlDocIndexTimestamp="633592774020000000" />
   <Assembly Name="Microsoft.Xna.Framework.Content.Pipeline, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" Image="0ff779e0-4657-437d-b04a-39f2b966bca1" Timestamp="633592753060000000" XmlDocIndexTimestamp="633592775940000000" />
-  <Assembly Name="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" Image="7ef1ec0a-acf6-4cfc-9e8d-48ff7b084a63" Timestamp="633646546093793487" XmlDocIndexTimestamp="633646546088043487" />
-  <Assembly Name="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="85a0759b-22f5-45c3-bac0-e077c926cd28" Timestamp="633300769580000000" XmlDocIndexTimestamp="633265251640000000" />
-  <Assembly Name="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="51b13b12-7519-4559-b9de-f48adbb63a0c" Timestamp="633300769580000000" XmlDocIndexTimestamp="633258349180000000" />
+  <Assembly Name="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" Image="7c68aa78-a422-4787-ad07-2e8995163311" Timestamp="633649627999181822" XmlDocIndexTimestamp="633649627993877822" />
+  <Assembly Name="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="c19ddd4d-fdd1-400f-90fa-4c042e1d7c30" Timestamp="633529896480000000" XmlDocIndexTimestamp="633265251640000000" />
+  <Assembly Name="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Image="439a4bab-00c6-49a5-9dd3-df3c840e382a" Timestamp="633529896480000000" XmlDocIndexTimestamp="633258349180000000" />
 </Assemblies>
